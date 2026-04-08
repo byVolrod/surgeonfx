@@ -46,11 +46,6 @@
     <div class="hero__spotlight"></div>
 
     <div class="hero__content">
-      <div class="hero__kicker">
-        <span class="dot-live"></span>
-        Trader actif · Certifié prop firm
-      </div>
-
       <h1 class="hero__title">
         <span class="line line--1">Découpe les</span>
         <span class="line line--2">marchés avec</span>
@@ -93,9 +88,25 @@
     </div>
 
     <div class="hero__visual">
+      <div class="htc-glow"></div>
 
-      <!-- Carte trading principale -->
       <div class="htc">
+
+        <!-- Barre d'app -->
+        <div class="htc__bar">
+          <div class="htc__bar-dots">
+            <i class="htc__dot-r"></i>
+            <i class="htc__dot-y"></i>
+            <i class="htc__dot-g"></i>
+          </div>
+          <span class="htc__bar-label">SurgeonFX · Trade Live</span>
+          <div class="htc__bar-status">
+            <span class="dot-live"></span>
+            <span>Live</span>
+          </div>
+        </div>
+
+        <!-- Paire + direction + R:R -->
         <div class="htc__top">
           <div class="htc__pair-wrap">
             <span class="htc__symbol">EUR/USD</span>
@@ -104,52 +115,40 @@
           <span class="htc__rr">+2.3R <span class="htc__check">✓</span></span>
         </div>
 
-        <!-- Chart chandelier SVG -->
+        <!-- Chart SVG -->
         <div class="htc__chart">
           <svg viewBox="0 0 280 108" class="htc__svg" xmlns="http://www.w3.org/2000/svg">
             <line x1="0" y1="30" x2="280" y2="30" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
             <line x1="0" y1="62" x2="280" y2="62" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
             <line x1="0" y1="92" x2="280" y2="92" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-            <!-- TP line -->
-            <line x1="0" y1="16" x2="230" y2="16" stroke="rgba(34,197,94,0.38)" stroke-width="1" stroke-dasharray="5,4"/>
-            <text x="234" y="20" fill="rgba(34,197,94,0.75)" font-size="8.5" font-family="Inter,sans-serif" font-weight="700">TP</text>
-            <!-- Entry line -->
-            <line x1="0" y1="72" x2="230" y2="72" stroke="rgba(26,127,255,0.38)" stroke-width="1" stroke-dasharray="5,4"/>
-            <text x="234" y="76" fill="rgba(26,127,255,0.75)" font-size="7" font-family="Inter,sans-serif" font-weight="600">Entry</text>
-            <!-- Candle 1 bearish -->
+            <line x1="0" y1="16" x2="230" y2="16" stroke="rgba(34,197,94,0.35)" stroke-width="1" stroke-dasharray="5,4"/>
+            <text x="234" y="20" fill="rgba(34,197,94,0.7)" font-size="8.5" font-family="Inter,sans-serif" font-weight="700">TP</text>
+            <line x1="0" y1="72" x2="230" y2="72" stroke="rgba(26,127,255,0.35)" stroke-width="1" stroke-dasharray="5,4"/>
+            <text x="234" y="76" fill="rgba(26,127,255,0.7)" font-size="7" font-family="Inter,sans-serif" font-weight="600">Entry</text>
             <line x1="16" y1="46" x2="16" y2="88" stroke="rgba(244,63,94,0.5)" stroke-width="1.5"/>
             <rect x="10" y="52" width="12" height="28" fill="rgba(244,63,94,0.4)" rx="1.5"/>
-            <!-- Candle 2 bullish -->
             <line x1="36" y1="55" x2="36" y2="89" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
             <rect x="30" y="60" width="12" height="22" fill="rgba(34,197,94,0.33)" rx="1.5"/>
-            <!-- Candle 3 bearish -->
             <line x1="56" y1="58" x2="56" y2="84" stroke="rgba(244,63,94,0.45)" stroke-width="1.5"/>
             <rect x="50" y="62" width="12" height="17" fill="rgba(244,63,94,0.35)" rx="1.5"/>
-            <!-- Candle 4 entry -->
             <line x1="76" y1="63" x2="76" y2="82" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
             <rect x="70" y="66" width="12" height="12" fill="rgba(34,197,94,0.3)" rx="1.5"/>
-            <!-- Candle 5 break -->
             <line x1="96" y1="52" x2="96" y2="79" stroke="rgba(34,197,94,0.72)" stroke-width="1.5"/>
             <rect x="90" y="54" width="12" height="22" fill="rgba(34,197,94,0.58)" rx="1.5"/>
-            <!-- Candle 6 fort -->
             <line x1="116" y1="40" x2="116" y2="70" stroke="rgba(34,197,94,0.85)" stroke-width="1.5"/>
             <rect x="109" y="42" width="14" height="26" fill="rgba(34,197,94,0.72)" rx="1.5"/>
-            <!-- Candle 7 grande (key move) -->
             <line x1="138" y1="22" x2="138" y2="64" stroke="rgba(34,197,94,0.95)" stroke-width="1.5"/>
             <rect x="130" y="24" width="16" height="38" fill="rgba(34,197,94,0.88)" rx="2"/>
-            <!-- Candle 8 continuation -->
             <line x1="162" y1="16" x2="162" y2="46" stroke="rgba(34,197,94,0.82)" stroke-width="1.5"/>
             <rect x="154" y="18" width="14" height="26" fill="rgba(34,197,94,0.72)" rx="1.5"/>
-            <!-- Candle 9 TP -->
             <line x1="184" y1="13" x2="184" y2="36" stroke="rgba(34,197,94,0.75)" stroke-width="1.5"/>
             <rect x="177" y="15" width="14" height="18" fill="rgba(34,197,94,0.62)" rx="1.5"/>
-            <!-- Candle 10 close -->
             <line x1="206" y1="11" x2="206" y2="28" stroke="rgba(34,197,94,0.65)" stroke-width="1.5"/>
             <rect x="199" y="12" width="14" height="13" fill="rgba(34,197,94,0.52)" rx="1.5"/>
           </svg>
         </div>
 
-        <!-- Trade details -->
+        <!-- Détails du trade -->
         <div class="htc__details">
           <div class="htc__d">
             <span>Entry</span><strong>1.08520</strong>
@@ -164,23 +163,21 @@
             <span>R:R</span><strong>2.3:1</strong>
           </div>
         </div>
-      </div>
 
-      <!-- Floating payout -->
-      <div class="hero-float hero-float--payout">
-        <span class="hf-ico">💰</span>
-        <div>
-          <strong>+$7,802</strong>
-          <span>Payout TraderScale</span>
+        <!-- Footer intégré -->
+        <div class="htc__foot">
+          <div class="htc__foot-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Certifié 3 prop firms</span>
+          </div>
+          <div class="htc__foot-sep"></div>
+          <div class="htc__foot-item htc__foot-item--green">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>Payout +$7,802</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Floating certifié -->
-      <div class="hero-float hero-float--cert">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-        Certifié Prop Firm
       </div>
-
     </div>
   </header>
 
