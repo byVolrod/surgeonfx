@@ -31,14 +31,24 @@
 ============================================================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
+
+/* Fond atmosphérique — position:fixed garantit une couverture totale sur tous navigateurs/mobiles */
+html::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:-1;
   background-color:var(--bg);
   background-image:
-    radial-gradient(ellipse 160% 90% at 90% 0%,   rgba(26,127,255,.16),transparent 50%),
-    radial-gradient(ellipse 130% 75% at 0%  40%,  rgba(26,127,255,.10),transparent 55%),
-    radial-gradient(ellipse 140% 80% at 100% 75%, rgba(26,127,255,.11),transparent 52%),
-    radial-gradient(ellipse 110% 65% at 50% 110%, rgba(26,127,255,.09),transparent 55%);
-  background-attachment:fixed;
+    radial-gradient(ellipse 180% 80% at 80%  -5%,  rgba(26,127,255,.18), transparent 55%),
+    radial-gradient(ellipse 140% 70% at -10% 45%,  rgba(26,127,255,.12), transparent 55%),
+    radial-gradient(ellipse 160% 70% at 110% 80%,  rgba(26,127,255,.13), transparent 55%),
+    radial-gradient(ellipse 120% 60% at 50%  115%, rgba(26,127,255,.10), transparent 55%);
+  pointer-events:none;
+}
+
+body{
+  background:transparent;
   color:var(--w);
   font-family:'Plus Jakarta Sans',sans-serif;
   -webkit-font-smoothing:antialiased;
