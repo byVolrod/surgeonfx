@@ -329,6 +329,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .parcours-split{grid-template-columns:1fr;gap:32px}
   .parcours-photo__wrap{aspect-ratio:4/3;max-height:380px}
   .certs-gallery{grid-template-columns:repeat(2,1fr)}
+  .certs-gallery .cert-img-card:nth-child(6){grid-column:auto}
   .certs-counter{flex-wrap:wrap;gap:16px;padding:20px}
   .cc-div{display:none}
   .cc-item{flex:unset;width:calc(50% - 8px)}
@@ -388,7 +389,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 /* ============================================================
    CERTS GALLERY (image cards + lightbox)
 ============================================================ */
-.certs-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:24px}
+.certs-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:24px}
 
 .cert-img-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;cursor:pointer;transition:border-color .25s,transform .25s var(--ease)}
 .cert-img-card:hover{border-color:var(--bdBlue);transform:translateY(-4px)}
