@@ -582,7 +582,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .method-pillar:hover{border-color:var(--bdBlue);transform:translateY(-4px)}
 .method-pillar:hover::before{transform:scaleX(1)}
 .mp-num{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue2);margin-bottom:12px;opacity:.7}
-.mp-icon{font-size:1.6rem;margin-bottom:12px;line-height:1}
+.mp-icon{width:42px;height:42px;background:var(--bgBlue);border:1px solid var(--bdBlue);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--blue2);margin-bottom:14px;flex-shrink:0}
 .method-pillar h3{font-size:.92rem;font-weight:800;margin-bottom:8px;color:#fff;letter-spacing:-.2px}
 .method-pillar p{font-size:.8rem;color:var(--g2);line-height:1.7}
 
