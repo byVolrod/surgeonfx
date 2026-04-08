@@ -141,23 +141,33 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .section-head p{font-size:.95rem;color:var(--g1);max-width:460px;margin:0 auto;line-height:1.72}
 
 /* ============================================================
-   TIMELINE — parcours
+   PARCOURS — photo + timeline verticale
 ============================================================ */
-.timeline{position:relative;max-width:780px;margin:0 auto;padding-top:10px}
-.timeline__line{position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--bdBlue) 15%,var(--bdBlue) 85%,transparent);transform:translateX(-50%)}
-.tl-item{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:44px;position:relative}
-.tl-item--right .tl-card{grid-column:2}
-.tl-item--left .tl-card{grid-column:1;text-align:right}
-.tl-item--right .tl-dot{left:50%}
-.tl-item--left .tl-dot{left:50%}
-.tl-dot{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:12px;height:12px;border-radius:50%;background:var(--blue);border:2px solid var(--bg);box-shadow:0 0 0 4px var(--bgBlue);z-index:1}
-.tl-dot--glow{box-shadow:0 0 0 6px var(--bgBlue),0 0 20px var(--blue)}
-.tl-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:24px 22px;transition:border-color .25s,transform .25s}
-.tl-card:hover{border-color:var(--bdBlue);transform:translateY(-2px)}
-.tl-card--featured{background:linear-gradient(135deg,rgba(26,127,255,.1),var(--card) 60%);border-color:var(--bdBlue)}
+.parcours-split{display:grid;grid-template-columns:320px 1fr;gap:52px;align-items:start}
+
+/* Photo */
+.parcours-photo__wrap{position:relative;border-radius:var(--r3);overflow:hidden;border:1px solid var(--border);aspect-ratio:3/4}
+.parcours-photo__wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .6s var(--ease)}
+.parcours-photo__wrap:hover img{transform:scale(1.03)}
+.parcours-photo__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,15,.9) 0%,rgba(6,6,15,.1) 50%,transparent 100%);pointer-events:none}
+.parcours-photo__tag{position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:7px;background:rgba(6,6,15,.72);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:999px;padding:6px 13px;font-size:.72rem;font-weight:600;color:#fff}
+.parcours-photo__name{position:absolute;bottom:18px;left:18px;font-size:.85rem;font-weight:700;color:#fff;letter-spacing:.02em}
+
+/* Timeline verticale */
+.parcours-tl{padding-top:4px}
+.tl-v{display:flex;flex-direction:column}
+.tl-v__item{display:grid;grid-template-columns:28px 1fr;gap:16px;position:relative}
+.tl-v__marker{display:flex;flex-direction:column;align-items:center;padding-top:4px}
+.tl-v__dot{width:12px;height:12px;border-radius:50%;background:var(--blue);border:2px solid var(--bg);box-shadow:0 0 0 4px var(--bgBlue);flex-shrink:0;z-index:1}
+.tl-v__dot--glow{box-shadow:0 0 0 6px var(--bgBlue),0 0 18px var(--blue)}
+.tl-v__line{flex:1;width:1px;background:linear-gradient(to bottom,var(--bdBlue),transparent);margin-top:6px;min-height:40px}
+.tl-v__card{padding-bottom:36px}
+.tl-v__card--featured{background:linear-gradient(135deg,rgba(26,127,255,.08),transparent 70%);border:1px solid var(--bdBlue);border-radius:var(--r2);padding:20px 20px 20px;margin-bottom:0}
+
+/* Shared card styles */
 .tl-card__year{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:8px}
-.tl-card h3{font-size:.95rem;font-weight:700;margin-bottom:8px;line-height:1.35}
-.tl-card p{font-size:.84rem;color:var(--g1);line-height:1.7}
+.tl-v__card h3{font-size:.97rem;font-weight:700;margin-bottom:8px;line-height:1.35;color:#fff}
+.tl-v__card p{font-size:.85rem;color:var(--g1);line-height:1.72}
 .tl-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:.82rem;font-weight:700;color:var(--blue2);transition:color .2s}
 .tl-link:hover{color:#fff}
 
@@ -316,10 +326,8 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .method-grid{grid-template-columns:1fr}
   .offer-solo__body{grid-template-columns:1fr;gap:20px}
   .reviews{grid-template-columns:1fr}
-  .timeline__line{left:16px}
-  .tl-item{grid-template-columns:1fr;padding-left:40px}
-  .tl-item--left .tl-card,.tl-item--right .tl-card{grid-column:1;text-align:left}
-  .tl-dot{left:16px}
+  .parcours-split{grid-template-columns:1fr;gap:32px}
+  .parcours-photo__wrap{aspect-ratio:4/3;max-height:380px}
   .certs-gallery{grid-template-columns:repeat(2,1fr)}
   .certs-counter{flex-wrap:wrap;gap:16px;padding:20px}
   .cc-div{display:none}
@@ -345,6 +353,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .section{padding:64px 0}
 }
 @media(max-width:520px){
+  .parcours-photo__wrap{aspect-ratio:3/2;max-height:300px}
   .hero{padding:90px 16px 52px}
   .hero__title{font-size:clamp(2rem,11vw,3rem);letter-spacing:-1.5px}
   .hero__cta-row{flex-direction:column;align-items:stretch;gap:12px}
