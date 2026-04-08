@@ -31,8 +31,7 @@
 ============================================================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--w);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
-h1,h2,h3,h4,.hero__title,.cta-wall__title,.ctaw__title,.brand,.section-head h2{font-family:'Syne',sans-serif}
+body{background:var(--bg);color:var(--w);font-family:'Plus Jakarta Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
 a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-width:100%}
 ::selection{background:var(--blue);color:#fff}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:rgba(26,127,255,.3);border-radius:4px}
@@ -51,7 +50,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .nav__inner{max-width:1140px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:0}
 
 /* Brand */
-.brand{display:flex;align-items:center;gap:10px;font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.2px;flex-shrink:0;color:#fff}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:-.2px;flex-shrink:0;color:#fff}
 .brand img{border-radius:8px;width:32px;height:32px}
 .brand b{color:var(--blue)}
 
@@ -241,7 +240,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 
 .offer-card__top{text-align:center}
 .offer-card__live{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:var(--green);font-size:.68rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
-.offer-card__name{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1}
+.offer-card__name{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1}
 .offer-card__sub{font-size:.75rem;color:var(--blue2);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
 
 .offer-card__proof{display:flex;align-items:center;background:var(--card2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
@@ -275,7 +274,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 ============================================================ */
 .faq{margin-top:12px}
 .faq__item{border-bottom:1px solid var(--border)}
-.faq__q{width:100%;background:none;border:none;color:#fff;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;text-align:left;padding:20px 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color .2s;line-height:1.4}
+.faq__q{width:100%;background:none;border:none;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:600;text-align:left;padding:20px 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color .2s;line-height:1.4}
 .faq__q::after{content:'+';font-size:1.3rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;transition:transform .3s var(--ease)}
 .faq__item.open .faq__q{color:var(--blue)}
 .faq__item.open .faq__q::after{transform:rotate(45deg)}
