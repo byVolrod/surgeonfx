@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#3a8eff"/>
+      <stop offset="100%" stop-color="#0055cc"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#60aaff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+  <rect width="100" height="100" rx="22" fill="url(#glow)"/>
+  <text x="50" y="71" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="900" font-size="62" fill="#5ab8ff" opacity="0.9">S</text>
+</svg>
