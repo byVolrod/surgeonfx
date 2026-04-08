@@ -30,21 +30,19 @@
    RESET
 ============================================================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
 
-/* Fond atmosphérique — position:fixed garantit une couverture totale sur tous navigateurs/mobiles */
-html::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  z-index:-1;
+/* Fond atmosphérique — sur html avec background-attachment:fixed,
+   fonctionne sur tous navigateurs y compris iOS Safari */
+html{
+  scroll-behavior:smooth;
   background-color:var(--bg);
   background-image:
-    radial-gradient(ellipse 180% 80% at 80%  -5%,  rgba(26,127,255,.18), transparent 55%),
-    radial-gradient(ellipse 140% 70% at -10% 45%,  rgba(26,127,255,.12), transparent 55%),
-    radial-gradient(ellipse 160% 70% at 110% 80%,  rgba(26,127,255,.13), transparent 55%),
-    radial-gradient(ellipse 120% 60% at 50%  115%, rgba(26,127,255,.10), transparent 55%);
-  pointer-events:none;
+    radial-gradient(ellipse 200% 90% at 85%  0%,   rgba(26,127,255,.22), transparent 52%),
+    radial-gradient(ellipse 150% 80% at -5%  45%,  rgba(26,127,255,.16), transparent 52%),
+    radial-gradient(ellipse 170% 80% at 105% 78%,  rgba(26,127,255,.18), transparent 52%),
+    radial-gradient(ellipse 130% 70% at 50%  110%, rgba(26,127,255,.13), transparent 52%);
+  background-attachment:fixed;
+  min-height:100%;
 }
 
 body{
