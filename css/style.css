@@ -306,14 +306,17 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 /* ============================================================
    FAQ
 ============================================================ */
-.faq{margin-top:12px}
-.faq__item{border-bottom:1px solid var(--border)}
-.faq__q{width:100%;background:none;border:none;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:600;text-align:left;padding:20px 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color .2s;line-height:1.4}
-.faq__q::after{content:'+';font-size:1.3rem;font-weight:300;color:var(--blue);flex-shrink:0;line-height:1;transition:transform .3s var(--ease)}
+.faq{margin-top:12px;display:flex;flex-direction:column;gap:10px}
+.faq__item{background:var(--card);border:1px solid rgba(255,255,255,.11);border-radius:var(--r2);overflow:hidden;transition:border-color .25s var(--ease)}
+.faq__item:hover{border-color:rgba(26,127,255,.35)}
+.faq__item.open{border-color:rgba(26,127,255,.4);background:linear-gradient(160deg,rgba(26,127,255,.06),var(--card) 60%)}
+.faq__q{width:100%;background:none;border:none;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:600;text-align:left;padding:20px 22px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color .2s;line-height:1.4}
+.faq__q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;width:26px;height:26px;border:1px solid rgba(26,127,255,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1;transition:transform .3s var(--ease),background .2s,border-color .2s}
+.faq__item:hover .faq__q::after{background:rgba(26,127,255,.1);border-color:rgba(26,127,255,.5)}
 .faq__item.open .faq__q{color:var(--blue)}
-.faq__item.open .faq__q::after{transform:rotate(45deg)}
+.faq__item.open .faq__q::after{transform:rotate(45deg);background:var(--blue);border-color:var(--blue);color:#fff}
 .faq__a{max-height:0;overflow:hidden;transition:max-height .38s var(--ease)}
-.faq__a p{font-size:.875rem;color:var(--g1);line-height:1.8;padding-bottom:20px}
+.faq__a p{font-size:.895rem;color:rgba(255,255,255,.72);line-height:1.82;padding:0 22px 22px}
 
 /* ============================================================
    CTA WALL — CONVERSION FINALE (redesign)
