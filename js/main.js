@@ -1,21 +1,44 @@
 // ===========================
+// CUSTOM CURSOR
+// ===========================
+const cursor    = document.getElementById('cursor');
+const cursorDot = document.getElementById('cursorDot');
+let mx = -100, my = -100, cx = -100, cy = -100;
+
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+function animateCursor() {
+  cx += (mx - cx) * 0.12;
+  cy += (my - cy) * 0.12;
+  if (cursor)    cursor.style.left    = cx + 'px', cursor.style.top    = cy + 'px';
+  if (cursorDot) cursorDot.style.left = mx + 'px', cursorDot.style.top = my + 'px';
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+document.querySelectorAll('a, button, [role="button"]').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor?.classList.add('hovering'));
+  el.addEventListener('mouseleave', () => cursor?.classList.remove('hovering'));
+});
+
+// ===========================
 // NAVBAR SCROLL
 // ===========================
-const navbar = document.getElementById('navbar');
+const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
+  nav.classList.toggle('solid', window.scrollY > 50);
 }, { passive: true });
 
 // ===========================
 // BURGER MENU
 // ===========================
-const burger = document.getElementById('burger');
+const burger   = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
 
 burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  navLinks.classList.toggle('open');
-  document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  const open = burger.classList.toggle('open');
+  navLinks.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
@@ -29,36 +52,71 @@ navLinks.querySelectorAll('a').forEach(link => {
 // ===========================
 // SCROLL REVEAL
 // ===========================
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      ro.unobserve(e.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
 // ===========================
-// FAQ ACCORDION
+// ACCORDION / FAQ
 // ===========================
-document.querySelectorAll('.faq__question').forEach(btn => {
+document.querySelectorAll('.accordion__q').forEach(btn => {
   btn.addEventListener('click', () => {
-    const item = btn.closest('.faq__item');
-    const answer = item.querySelector('.faq__answer');
+    const item   = btn.closest('.accordion__item');
+    const answer = item.querySelector('.accordion__a');
     const isOpen = item.classList.contains('open');
 
-    // Close all
-    document.querySelectorAll('.faq__item.open').forEach(openItem => {
-      openItem.classList.remove('open');
-      openItem.querySelector('.faq__answer').style.maxHeight = '0';
+    document.querySelectorAll('.accordion__item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.accordion__a').style.maxHeight = '0';
     });
 
-    // Open clicked if it was closed
     if (!isOpen) {
       item.classList.add('open');
       answer.style.maxHeight = answer.scrollHeight + 'px';
     }
   });
 });
+
+// ===========================
+// MEMBER COUNT ANIMATION
+// ===========================
+const counterEl = document.getElementById('memberCount');
+if (counterEl) {
+  let count = 200;
+  const target = 247;
+  const step = () => {
+    if (count < target) {
+      count += Math.ceil((target - count) / 8);
+      counterEl.textContent = count + ' membres actifs';
+      requestAnimationFrame(step);
+    } else {
+      counterEl.textContent = target + ' membres actifs';
+    }
+  };
+  setTimeout(step, 600);
+}
+
+// ===========================
+// ACTIVE NAV LINK ON SCROLL
+// ===========================
+const sections = document.querySelectorAll('section[id], div[id="results"]');
+const navAnchors = document.querySelectorAll('.nav__links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+  });
+  navAnchors.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current
+      ? 'rgba(255,255,255,1)'
+      : '';
+  });
+}, { passive: true });

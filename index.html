@@ -3,232 +3,347 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SurgeonFX — Trading Forex de précision. Analyses, setups et communauté de traders sérieux avec Matt." />
+  <meta name="description" content="SurgeonFX — Trading Forex de précision chirurgicale. Analyses, setups et communauté de traders d'élite avec Matt." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0a0a0f" />
-  <meta property="og:title" content="SurgeonFX — Trading Forex de précision" />
-  <meta property="og:description" content="Analyses en temps réel, prises de positions et résultats transparents. Rejoins la communauté SurgeonFX." />
+  <meta name="theme-color" content="#030308" />
+  <meta property="og:title" content="SurgeonFX — Precision Trading" />
+  <meta property="og:description" content="Analyses Forex en temps réel. Prises de positions transparentes. Rejoins l'élite." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://surgeonfx.netlify.app/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <title>SurgeonFX — Trading Forex de précision</title>
+  <title>SurgeonFX — Precision Trading</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
   <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="#" class="navbar__logo">
-        <span class="logo-text">Surgeon<span class="logo-fx">FX</span></span>
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <div class="nav__logo-mark">S</div>
+        <span>Surgeon<strong>FX</strong></span>
       </a>
-      <ul class="navbar__links" id="navLinks">
-        <li><a href="#methode">Méthode</a></li>
-        <li><a href="#resultats">Résultats</a></li>
-        <li><a href="#offres">Offres</a></li>
-        <li><a href="#temoignages">Témoignages</a></li>
-        <li><a href="#faq">FAQ</a></li>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#method" data-text="Méthode">Méthode</a></li>
+        <li><a href="#results" data-text="Résultats">Résultats</a></li>
+        <li><a href="#offers" data-text="Offres">Offres</a></li>
+        <li><a href="#testimonials" data-text="Témoignages">Témoignages</a></li>
+        <li><a href="#faq" data-text="FAQ">FAQ</a></li>
       </ul>
-      <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="btn btn--gold navbar__cta">
-        Rejoindre
-      </a>
-      <button class="navbar__burger" id="burger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__right">
+        <a href="https://instagram.com/matt.crx" target="_blank" rel="noopener" class="nav__ig" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="btn-primary">
+          Rejoindre
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="nav__burger" id="burger">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero" id="accueil">
-    <div class="hero__glow hero__glow--top"></div>
-    <div class="hero__glow hero__glow--bottom"></div>
-    <div class="container hero__inner">
-      <div class="badge fade-up">
-        <span class="badge__dot"></span>
-        Précision · Analyses · Résultats
+  <section class="hero" id="home">
+    <!-- Animated grid bg -->
+    <div class="hero__grid"></div>
+    <!-- Orbs -->
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+
+    <div class="hero__content">
+      <!-- Live indicator -->
+      <div class="pill reveal">
+        <span class="pill__live"></span>
+        <span>Analyses en direct</span>
+        <span class="pill__sep">·</span>
+        <span class="pill__count" id="memberCount">247 membres actifs</span>
       </div>
-      <h1 class="hero__title fade-up delay-1">
-        Trade comme un chirurgien.<br />
-        <span class="gradient-text">Précis. Méthodique. Rentable.</span>
+
+      <!-- Big title -->
+      <h1 class="hero__title reveal reveal--delay1">
+        <span class="hero__title-line">Trade like</span>
+        <span class="hero__title-accent">a Surgeon.</span>
       </h1>
-      <p class="hero__sub fade-up delay-2">
-        Analyses Forex en temps réel, prises de positions transparentes et une communauté de traders qui ne coupent que ce qui doit l'être.
+
+      <!-- Sub -->
+      <p class="hero__sub reveal reveal--delay2">
+        Précision chirurgicale sur les marchés Forex.<br />
+        Chaque setup est analysé, chaque trade est justifié.
       </p>
-      <div class="hero__ctas fade-up delay-3">
-        <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="btn btn--gold btn--lg">
-          Rejoindre SurgeonFX
+
+      <!-- CTAs -->
+      <div class="hero__cta reveal reveal--delay3">
+        <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="btn-primary btn-primary--lg">
+          Rejoindre l'équipe
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#methode" class="btn btn--ghost">Voir la méthode ↓</a>
+        <a href="#method" class="btn-secondary">
+          Découvrir la méthode
+        </a>
       </div>
-      <div class="hero__trust fade-up delay-4">
-        <span><span class="dot dot--green"></span>Membres actifs</span>
-        <span class="divider">|</span>
-        <span>Noté 5.0★ sur Whop</span>
-        <span class="divider">|</span>
-        <span>Sans engagement</span>
+
+      <!-- Stats strip -->
+      <div class="hero__stats reveal reveal--delay4">
+        <div class="hstat">
+          <span class="hstat__n">5.0</span>
+          <span class="hstat__u">★ Whop</span>
+        </div>
+        <div class="hstat__divider"></div>
+        <div class="hstat">
+          <span class="hstat__n">100%</span>
+          <span class="hstat__u">Transparent</span>
+        </div>
+        <div class="hstat__divider"></div>
+        <div class="hstat">
+          <span class="hstat__n">0€</span>
+          <span class="hstat__u">Pour commencer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrolldown -->
+    <a href="#method" class="hero__scroll">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </section>
+
+  <!-- METHOD -->
+  <section class="section" id="method">
+    <div class="wrap">
+      <div class="section__label reveal">01 — Méthode</div>
+      <div class="section__split">
+        <div class="section__split-left">
+          <h2 class="h2 reveal">
+            L'approche du chirurgien.<br />
+            <span class="text-accent">Rien n'est laissé au hasard.</span>
+          </h2>
+        </div>
+        <div class="section__split-right">
+          <p class="body-lg reveal">
+            Chaque trade est une opération. On prépare. On analyse. On exécute avec précision. On ne coupe que ce qui doit l'être.
+          </p>
+        </div>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-card reveal">
+          <div class="method-card__num">01</div>
+          <div class="method-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h20M12 2l10 10-10 10"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Structure de marché</h3>
+          <p>Lecture des zones de liquidité, BOS, CHoCH et flux directionnels institutionnels avant toute entrée.</p>
+        </div>
+        <div class="method-card reveal reveal--d1">
+          <div class="method-card__num">02</div>
+          <div class="method-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Biais fondamental</h3>
+          <p>Calendrier économique, COT report, positionnement retail vs smart money. On trade dans le sens du flux.</p>
+        </div>
+        <div class="method-card reveal reveal--d2">
+          <div class="method-card__num">03</div>
+          <div class="method-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Exécution & gestion</h3>
+          <p>Entrée millimétrée, stop loss défini avant toute prise de position, ratio R minimum. Discipline absolue.</p>
+        </div>
+        <div class="method-card reveal reveal--d3">
+          <div class="method-card__num">04</div>
+          <div class="method-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3>Suivi & transparence</h3>
+          <p>Chaque trade partagé en temps réel avec le raisonnement complet. Résultats positifs ou négatifs, tout est visible.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS -->
-  <div class="stats-bar" id="resultats">
-    <div class="container stats-bar__inner">
-      <div class="stat">
-        <span class="stat__value">+85%</span>
-        <span class="stat__label">Win rate moyen</span>
-      </div>
-      <div class="stat__divider"></div>
-      <div class="stat">
-        <span class="stat__value">5.0★</span>
-        <span class="stat__label">Note Whop</span>
-      </div>
-      <div class="stat__divider"></div>
-      <div class="stat">
-        <span class="stat__value">Forex</span>
-        <span class="stat__label">Marchés couverts</span>
-      </div>
-      <div class="stat__divider"></div>
-      <div class="stat">
-        <span class="stat__value">24/7</span>
-        <span class="stat__label">Analyses en temps réel</span>
-      </div>
+  <!-- RESULTS (ticker style) -->
+  <div class="ticker-section" id="results">
+    <div class="ticker-track">
+      <div class="ticker__item ticker__item--win">EUR/USD +2.3R ✓</div>
+      <div class="ticker__item ticker__item--win">GBP/JPY +1.8R ✓</div>
+      <div class="ticker__item ticker__item--loss">USD/CHF -1R ✗</div>
+      <div class="ticker__item ticker__item--win">XAU/USD +3.1R ✓</div>
+      <div class="ticker__item ticker__item--win">EUR/GBP +1.5R ✓</div>
+      <div class="ticker__item ticker__item--win">USD/JPY +2.7R ✓</div>
+      <div class="ticker__item ticker__item--win">GBP/USD +1.9R ✓</div>
+      <div class="ticker__item ticker__item--loss">AUD/USD -1R ✗</div>
+      <div class="ticker__item ticker__item--win">EUR/USD +2.3R ✓</div>
+      <div class="ticker__item ticker__item--win">GBP/JPY +1.8R ✓</div>
+      <div class="ticker__item ticker__item--loss">USD/CHF -1R ✗</div>
+      <div class="ticker__item ticker__item--win">XAU/USD +3.1R ✓</div>
+      <div class="ticker__item ticker__item--win">EUR/GBP +1.5R ✓</div>
+      <div class="ticker__item ticker__item--win">USD/JPY +2.7R ✓</div>
+      <div class="ticker__item ticker__item--win">GBP/USD +1.9R ✓</div>
+      <div class="ticker__item ticker__item--loss">AUD/USD -1R ✗</div>
     </div>
   </div>
 
-  <!-- METHODE -->
-  <section class="section" id="methode">
-    <div class="container">
-      <div class="section__header scroll-reveal">
-        <div class="badge">Méthode</div>
-        <h2 class="section__title">Le trading, <span class="gradient-text">comme une opération.</span></h2>
-        <p class="section__sub">Chaque trade est préparé avec la même précision qu'un chirurgien. Pas d'improvisation. Que de la méthode.</p>
-      </div>
-      <div class="cards-grid cards-grid--3">
-        <div class="card scroll-reveal">
-          <div class="card__icon">🔬</div>
-          <h3 class="card__title">Analyse chirurgicale</h3>
-          <p class="card__text">Lecture des zones de liquidité, structure de marché et flux institutionnels. On identifie les setups avant que le marché bouge.</p>
+  <!-- ABOUT MATT -->
+  <section class="section section--dark" id="about">
+    <div class="wrap">
+      <div class="about-layout">
+        <div class="about__left reveal">
+          <div class="section__label">02 — À propos</div>
+          <h2 class="h2">Qui est<br /><span class="text-accent">Matt ?</span></h2>
+          <p class="body-lg">Trader Forex à plein temps, fondateur de SurgeonFX. Matt partage sa méthode, ses analyses et ses prises de positions en temps réel avec une communauté d'élite.</p>
+          <ul class="about__list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Trader Forex à plein temps
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Approche fondamentale & technique
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Transparence totale sur les résultats
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Communauté privée & active
+            </li>
+          </ul>
+          <a href="https://instagram.com/matt.crx" target="_blank" rel="noopener" class="btn-outline reveal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Suivre @matt.crx
+          </a>
         </div>
-        <div class="card scroll-reveal delay-1">
-          <div class="card__icon">⚡</div>
-          <h3 class="card__title">Exécution précise</h3>
-          <p class="card__text">Entrées et sorties millimétrées. Gestion du risque stricte. On ne prend que les trades qui méritent d'être pris.</p>
-        </div>
-        <div class="card scroll-reveal delay-2">
-          <div class="card__icon">📊</div>
-          <h3 class="card__title">Transparence totale</h3>
-          <p class="card__text">Chaque prise de position est partagée en temps réel avec les raisons. Résultats bons ou mauvais, tout est visible.</p>
+        <div class="about__right reveal reveal--d1">
+          <div class="about__card">
+            <div class="about__card-glow"></div>
+            <div class="about__avatar">M</div>
+            <div class="about__card-name">Matt</div>
+            <div class="about__card-handle">@matt.crx</div>
+            <div class="about__card-stats">
+              <div class="astat">
+                <span>Fondateur</span>
+                <strong>SurgeonFX</strong>
+              </div>
+              <div class="astat__div"></div>
+              <div class="astat">
+                <span>Note</span>
+                <strong>5.0 ★</strong>
+              </div>
+              <div class="astat__div"></div>
+              <div class="astat">
+                <span>Marchés</span>
+                <strong>FX</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OFFRES / PRICING -->
-  <section class="section section--alt" id="offres">
-    <div class="glow-bottom"></div>
-    <div class="container">
-      <div class="section__header scroll-reveal">
-        <div class="badge">Offres</div>
-        <h2 class="section__title">Commence <span class="gradient-text">maintenant.</span></h2>
-        <p class="section__sub">Pas d'engagement. Upgrade quand tu veux, annule quand tu veux.</p>
-      </div>
-      <div class="cards-grid cards-grid--2 pricing-grid">
+  <!-- OFFERS / PRICING -->
+  <section class="section" id="offers">
+    <div class="wrap">
+      <div class="section__label reveal">03 — Offres</div>
+      <h2 class="h2 reveal">Commence <span class="text-accent">maintenant.</span><br />Scale quand tu es prêt.</h2>
 
-        <!-- Plan Free -->
-        <div class="card pricing-card scroll-reveal">
-          <div class="pricing-card__header">
-            <div>
-              <span class="pricing-card__emoji">📈</span>
-              <span class="pricing-card__name">SurgeonFX — FREE</span>
+      <div class="pricing-grid">
+        <!-- FREE -->
+        <div class="price-card reveal">
+          <div class="price-card__tag">Gratuit</div>
+          <div class="price-card__header">
+            <h3>Free</h3>
+            <div class="price-card__price">
+              <span class="price-big">0€</span>
             </div>
-            <p class="pricing-card__desc">Accès immédiat. Zéro engagement. Découvre la méthode.</p>
+            <p>Découvre la méthode. Zéro risque, zéro engagement.</p>
           </div>
-          <div class="pricing-card__price">
-            <span class="price__amount">Gratuit</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li><span class="check check--green">✓</span> Accès au salon communauté Discord</li>
-            <li><span class="check check--green">✓</span> Analyses de marché générales</li>
-            <li><span class="check check--green">✓</span> Contenu éducatif Forex</li>
+          <ul class="price-card__features">
+            <li><span class="feat-check">✓</span> Salon communauté Discord</li>
+            <li><span class="feat-check">✓</span> Analyses de marché générales</li>
+            <li><span class="feat-check">✓</span> Contenu éducatif Forex</li>
           </ul>
-          <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="btn btn--outline btn--full">
+          <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="price-card__btn price-card__btn--outline">
             Commencer gratuitement
           </a>
         </div>
 
-        <!-- Plan Premium -->
-        <div class="card pricing-card pricing-card--popular scroll-reveal delay-1">
-          <div class="pricing-card__badge">⚡ MEILLEURE OFFRE</div>
-          <div class="pricing-card__header">
-            <div>
-              <span class="pricing-card__emoji">💎</span>
-              <span class="pricing-card__name">SurgeonFX — PREMIUM</span>
+        <!-- PREMIUM (featured) -->
+        <div class="price-card price-card--featured reveal reveal--d1">
+          <div class="price-card__featured-glow"></div>
+          <div class="price-card__badge">⚡ Recommandé</div>
+          <div class="price-card__header">
+            <h3>Premium</h3>
+            <div class="price-card__price">
+              <span class="price-big">—</span>
+              <span class="price-sub">voir sur Whop</span>
             </div>
-            <p class="pricing-card__desc">L'accès complet. Toutes les analyses, tous les setups, tout Matt.</p>
+            <p>L'accès complet. Toutes les analyses, tous les setups, tout Matt.</p>
           </div>
-          <div class="pricing-card__price">
-            <span class="price__amount">À voir</span>
-            <span class="price__period">sur Whop</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li><span class="check check--gold">✓</span> Analyses et prises de positions en temps réel</li>
-            <li><span class="check check--gold">✓</span> Setups exclusifs pre-market quotidiens</li>
-            <li><span class="check check--gold">✓</span> Analyses fondamentales hebdomadaires</li>
-            <li><span class="check check--gold">✓</span> Accès VIP & support prioritaire</li>
-            <li><span class="check check--gold">✓</span> Accès à toutes les ressources</li>
+          <ul class="price-card__features">
+            <li><span class="feat-check feat-check--accent">✓</span> Prises de positions en temps réel</li>
+            <li><span class="feat-check feat-check--accent">✓</span> Setups pre-market quotidiens</li>
+            <li><span class="feat-check feat-check--accent">✓</span> Analyses fondamentales hebdomadaires</li>
+            <li><span class="feat-check feat-check--accent">✓</span> Accès VIP & support prioritaire</li>
+            <li><span class="feat-check feat-check--accent">✓</span> Toutes les ressources & archives</li>
           </ul>
-          <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="btn btn--gold btn--full">
+          <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="price-card__btn price-card__btn--accent">
             Rejoindre Premium
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- TÉMOIGNAGES -->
-  <section class="section" id="temoignages">
-    <div class="container">
-      <div class="section__header scroll-reveal">
-        <div class="badge">Témoignages</div>
-        <h2 class="section__title">Ils ont rejoint <span class="gradient-text">SurgeonFX.</span></h2>
-        <p class="section__sub">Des résultats réels. Des traders comme toi.</p>
-      </div>
-      <div class="cards-grid cards-grid--3">
-        <div class="testimonial scroll-reveal">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">"Depuis que j'ai rejoint SurgeonFX, ma vision du marché a totalement changé. Les analyses de Matt sont précises et bien expliquées."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">A</div>
+  <!-- TESTIMONIALS -->
+  <section class="section section--dark" id="testimonials">
+    <div class="wrap">
+      <div class="section__label reveal">04 — Témoignages</div>
+      <h2 class="h2 reveal">Ils ont rejoint <span class="text-accent">l'équipe.</span></h2>
+
+      <div class="reviews-grid">
+        <div class="review reveal">
+          <div class="review__stars">★★★★★</div>
+          <p>"La méthode de Matt est solide. On comprend pourquoi on prend chaque trade. Les résultats suivent naturellement quand on applique correctement."</p>
+          <div class="review__author">
+            <div class="review__av">A</div>
             <div>
-              <div class="testimonial__name">Antoine R.</div>
-              <div class="testimonial__role">Membre Premium</div>
+              <strong>Antoine R.</strong>
+              <span>Membre Premium</span>
             </div>
           </div>
         </div>
-        <div class="testimonial scroll-reveal delay-1">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">"La méthode est solide, les prises de positions sont claires. J'ai enfin une structure dans mon trading. Merci Matt !"</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">L</div>
+        <div class="review reveal reveal--d1">
+          <div class="review__stars">★★★★★</div>
+          <p>"Enfin un trader qui montre tout — les gains ET les pertes. Cette honnêteté, c'est ce qui m'a convaincu de rester. Excellente communauté."</p>
+          <div class="review__author">
+            <div class="review__av">L</div>
             <div>
-              <div class="testimonial__name">Lucas M.</div>
-              <div class="testimonial__role">Membre Premium</div>
+              <strong>Lucas M.</strong>
+              <span>Membre Premium</span>
             </div>
           </div>
         </div>
-        <div class="testimonial scroll-reveal delay-2">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">"Meilleur investissement que j'ai fait dans le trading. La transparence sur les résultats et la pédagogie sont au top."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">S</div>
+        <div class="review reveal reveal--d2">
+          <div class="review__stars">★★★★★</div>
+          <p>"Meilleur investissement dans mon trading. En 3 mois, ma gestion du risque et ma lecture des marchés ont complètement changé."</p>
+          <div class="review__author">
+            <div class="review__av">S</div>
             <div>
-              <div class="testimonial__name">Sofia K.</div>
-              <div class="testimonial__role">Membre Premium</div>
+              <strong>Sofia K.</strong>
+              <span>Membre Premium</span>
             </div>
           </div>
         </div>
@@ -237,83 +352,78 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section section--alt" id="faq">
-    <div class="container container--sm">
-      <div class="section__header scroll-reveal">
-        <div class="badge">FAQ</div>
-        <h2 class="section__title">Questions <span class="gradient-text">fréquentes.</span></h2>
-      </div>
-      <div class="faq scroll-reveal">
-        <div class="faq__item">
-          <button class="faq__question">C'est quoi SurgeonFX ?</button>
-          <div class="faq__answer">
-            <p>SurgeonFX est une communauté de trading Forex fondée par Matt (matt.crx). L'objectif : partager des analyses de précision, des prises de positions en temps réel et une méthode structurée pour trader les marchés Forex.</p>
-          </div>
+  <section class="section" id="faq">
+    <div class="wrap wrap--sm">
+      <div class="section__label reveal">05 — FAQ</div>
+      <h2 class="h2 reveal">Questions <span class="text-accent">fréquentes.</span></h2>
+
+      <div class="accordion reveal">
+        <div class="accordion__item">
+          <button class="accordion__q">C'est quoi SurgeonFX ?</button>
+          <div class="accordion__a"><p>SurgeonFX est une communauté de trading Forex fondée par Matt (@matt.crx). L'objectif : partager des analyses de précision, des prises de positions en temps réel et une méthode rigoureuse pour trader les marchés FX.</p></div>
         </div>
-        <div class="faq__item">
-          <button class="faq__question">Faut-il avoir de l'expérience en trading ?</button>
-          <div class="faq__answer">
-            <p>Non. L'offre gratuite permet aux débutants de découvrir la méthode et les bases. Le Premium est adapté à tous les niveaux avec du contenu pédagogique et des analyses expliquées pas à pas.</p>
-          </div>
+        <div class="accordion__item">
+          <button class="accordion__q">Faut-il avoir de l'expérience en trading ?</button>
+          <div class="accordion__a"><p>Non. L'offre gratuite permet aux débutants de découvrir la méthode. Le contenu Premium est adapté à tous les niveaux avec des analyses expliquées étape par étape.</p></div>
         </div>
-        <div class="faq__item">
-          <button class="faq__question">Comment fonctionne l'abonnement ?</button>
-          <div class="faq__answer">
-            <p>Tout passe par Whop. Tu t'inscris, tu choisis ton plan, et tu accèdes immédiatement à la communauté Discord et aux contenus. Sans engagement, annulable à tout moment.</p>
-          </div>
+        <div class="accordion__item">
+          <button class="accordion__q">Comment fonctionne l'abonnement ?</button>
+          <div class="accordion__a"><p>Tout se passe sur Whop. Tu t'inscris, tu choisis ton plan, et tu accèdes immédiatement au Discord et aux contenus. Sans engagement, annulable à tout moment.</p></div>
         </div>
-        <div class="faq__item">
-          <button class="faq__question">Sur quels marchés Matt trade-t-il ?</button>
-          <div class="faq__answer">
-            <p>SurgeonFX se concentre principalement sur le Forex (paires majeures et mineures) avec une approche fondamentale et technique basée sur les flux institutionnels.</p>
-          </div>
+        <div class="accordion__item">
+          <button class="accordion__q">Sur quels marchés Matt trade-t-il ?</button>
+          <div class="accordion__a"><p>SurgeonFX se concentre sur le Forex — paires majeures et mineures — avec une approche combinant analyse technique (SMC) et fondamentale (biais macro, COT, flux institutionnels).</p></div>
         </div>
-        <div class="faq__item">
-          <button class="faq__question">Est-ce que les résultats sont vraiment transparents ?</button>
-          <div class="faq__answer">
-            <p>Oui. Chaque trade est partagé en temps réel dans la communauté avec le raisonnement. Les gains comme les pertes sont documentés. Pas de cherry-picking.</p>
-          </div>
+        <div class="accordion__item">
+          <button class="accordion__q">Les résultats sont-ils vraiment transparents ?</button>
+          <div class="accordion__a"><p>Oui, sans exception. Chaque trade est partagé en temps réel avec le raisonnement complet. Gains et pertes sont documentés. Pas de cherry-picking.</p></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA FINAL -->
-  <section class="section cta-section">
-    <div class="cta-glow"></div>
-    <div class="container container--sm text-center scroll-reveal">
-      <h2 class="section__title">Prêt à trader <span class="gradient-text">avec précision ?</span></h2>
-      <p class="section__sub">Rejoins SurgeonFX aujourd'hui. Gratuit pour commencer.</p>
-      <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="btn btn--gold btn--lg">
-        Rejoindre SurgeonFX
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+  <section class="cta-final">
+    <div class="cta-final__bg"></div>
+    <div class="wrap wrap--sm text-center">
+      <div class="pill pill--center reveal">Rejoindre maintenant</div>
+      <h2 class="h2 reveal">Prêt à opérer<br /><span class="text-accent">les marchés ?</span></h2>
+      <p class="body-lg reveal">Gratuit pour commencer. Aucun engagement. Rejoins une communauté de traders qui ne laissent rien au hasard.</p>
+      <div class="cta-final__btns reveal">
+        <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener" class="btn-primary btn-primary--lg">
+          Rejoindre SurgeonFX
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">
+    <div class="footer__inner wrap">
       <div class="footer__brand">
-        <span class="logo-text">Surgeon<span class="logo-fx">FX</span></span>
-        <p>Trading Forex de précision.<br />Fondé par <a href="https://instagram.com/matt.crx" target="_blank" rel="noopener">@matt.crx</a></p>
+        <div class="nav__logo">
+          <div class="nav__logo-mark">S</div>
+          <span>Surgeon<strong>FX</strong></span>
+        </div>
+        <p>Trading Forex de précision chirurgicale.<br />Fondé par <a href="https://instagram.com/matt.crx" target="_blank" rel="noopener">@matt.crx</a></p>
       </div>
-      <div class="footer__links">
+      <div class="footer__nav">
         <div class="footer__col">
-          <span class="footer__col-title">Navigation</span>
-          <a href="#methode">Méthode</a>
-          <a href="#offres">Offres</a>
-          <a href="#temoignages">Témoignages</a>
+          <span>Navigation</span>
+          <a href="#method">Méthode</a>
+          <a href="#offers">Offres</a>
+          <a href="#testimonials">Témoignages</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="footer__col">
-          <span class="footer__col-title">Liens</span>
-          <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener">Rejoindre Whop</a>
+          <span>Liens</span>
+          <a href="https://whop.com/joined/surgeon-fx/" target="_blank" rel="noopener">Rejoindre</a>
           <a href="https://instagram.com/matt.crx" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
     </div>
-    <div class="container footer__bottom">
+    <div class="footer__bottom wrap">
       <span>© 2025 SurgeonFX. Tous droits réservés.</span>
       <span>Le trading comporte des risques. Les performances passées ne garantissent pas les résultats futurs.</span>
     </div>
