@@ -32,7 +32,7 @@
         <a href="https://www.instagram.com/surgeonfxgroup" target="_blank" rel="noopener" class="nav__ig">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
-        <a href="https://whop.com/joined/surgeon-fx/products/surgeon-fx/" target="_blank" rel="noopener" class="pill-btn">Candidater →</a>
+        <a href="https://whop.com/joined/surgeon-fx/products/surgeon-fx/" target="_blank" rel="noopener" class="pill-btn">Rejoindre →</a>
         <button class="burger" id="burger"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -63,7 +63,7 @@
 
       <div class="hero__cta-row">
         <a href="https://whop.com/joined/surgeon-fx/products/surgeon-fx/" target="_blank" rel="noopener" class="btn-main">
-          Postuler maintenant
+          Rejoindre SurgeonFX
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="#certifications" class="btn-ghost">Voir les certifications ↓</a>
@@ -71,8 +71,8 @@
 
       <div class="hero__proof">
         <div class="proof-item">
-          <strong id="memberCount">200+</strong>
-          <span>membres actifs</span>
+          <strong>6</strong>
+          <span>membres Premium</span>
         </div>
         <div class="proof-sep"></div>
         <div class="proof-item">
@@ -304,140 +304,170 @@
         </div>
       </div>
 
-      <!-- GALERIE CERTIFICATS -->
-      <div class="certs-gallery">
+      <!-- CAROUSEL CERTIFICATS (défilement infini) -->
+      <div class="certs-scroll reveal">
+        <div class="certs-scroll__track">
 
-        <!-- Alpha Capital Phase 2 #1 -->
-        <div class="cert-img-card reveal" data-cert="public/certs/alpha-phase2-1.jpg">
-          <div class="cert-img-card__preview">
-            <img src="public/certs/alpha-phase2-1.jpg" alt="Alpha Capital Phase 2 Certificate" loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="cert-img-card__placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <!-- SET 1 -->
+          <div class="cert-img-card" data-cert="public/certs/alpha-phase2-1.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/alpha-phase2-1.jpg" alt="Alpha Capital Phase 2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
             </div>
-            <div class="cert-img-card__zoom">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-          <div class="cert-img-card__info">
-            <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
-            <div class="cert-img-card__title">Phase 2 · Certificate of Achievement</div>
-            <div class="cert-img-card__meta">
-              <span class="cert-status cert-status--pass">✓ Passed</span>
-              <span class="cert-date">04 Mar 2026</span>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
+              <div class="cert-img-card__title">Phase 2 · Certificate of Achievement</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Passed</span><span class="cert-date">04 Mar 2026</span></div>
             </div>
           </div>
+
+          <div class="cert-img-card" data-cert="public/certs/alpha-phase2.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/alpha-phase2.jpg" alt="Alpha Capital Phase 2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
+              <div class="cert-img-card__title">Phase 2 · Certificate of Achievement</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Passed</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" data-cert="public/certs/alpha-verification-1.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/alpha-verification-1.jpg" alt="Alpha Capital Verification" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
+              <div class="cert-img-card__title">Passed Verification · Qualified</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Qualified</span><span class="cert-date">16 Sep 2025</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" data-cert="public/certs/alpha-verification.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/alpha-verification.jpg" alt="Alpha Capital Verification" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
+              <div class="cert-img-card__title">Passed Verification · Qualified</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Qualified</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" data-cert="public/certs/traderscale.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/traderscale.jpg" alt="TraderScale 100K" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--ts">TraderScale</span></div>
+              <div class="cert-img-card__title">One Step Assessment 100K</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Funded</span><span class="cert-date">14 Sep 2024</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" data-cert="public/certs/ftmo.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/ftmo.jpg" alt="FTMO Verification" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--ftmo">FTMO</span></div>
+              <div class="cert-img-card__title">Passed Verification · Evaluation</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Verified</span><span class="cert-date">18 Fév 2025</span></div>
+            </div>
+          </div>
+
+          <!-- SET 2 (duplicate pour boucle seamless) -->
+          <div class="cert-img-card" aria-hidden="true" data-cert="public/certs/alpha-phase2-1.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/alpha-phase2-1.jpg" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
+              <div class="cert-img-card__title">Phase 2 · Certificate of Achievement</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Passed</span><span class="cert-date">04 Mar 2026</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" aria-hidden="true" data-cert="public/certs/alpha-phase2.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/alpha-phase2.jpg" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
+              <div class="cert-img-card__title">Phase 2 · Certificate of Achievement</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Passed</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" aria-hidden="true" data-cert="public/certs/alpha-verification-1.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/alpha-verification-1.jpg" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
+              <div class="cert-img-card__title">Passed Verification · Qualified</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Qualified</span><span class="cert-date">16 Sep 2025</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" aria-hidden="true" data-cert="public/certs/alpha-verification.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/alpha-verification.jpg" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
+              <div class="cert-img-card__title">Passed Verification · Qualified</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Qualified</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" aria-hidden="true" data-cert="public/certs/traderscale.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/traderscale.jpg" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--ts">TraderScale</span></div>
+              <div class="cert-img-card__title">One Step Assessment 100K</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Funded</span><span class="cert-date">14 Sep 2024</span></div>
+            </div>
+          </div>
+
+          <div class="cert-img-card" aria-hidden="true" data-cert="public/certs/ftmo.jpg">
+            <div class="cert-img-card__preview">
+              <img src="public/certs/ftmo.jpg" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="cert-img-card__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="cert-img-card__zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="cert-img-card__info">
+              <div class="cert-img-card__firm"><span class="firm-badge firm-badge--ftmo">FTMO</span></div>
+              <div class="cert-img-card__title">Passed Verification · Evaluation</div>
+              <div class="cert-img-card__meta"><span class="cert-status cert-status--pass">✓ Verified</span><span class="cert-date">18 Fév 2025</span></div>
+            </div>
+          </div>
+
         </div>
-
-        <!-- Alpha Capital Phase 2 #2 -->
-        <div class="cert-img-card reveal reveal--d1" data-cert="public/certs/alpha-phase2.jpg">
-          <div class="cert-img-card__preview">
-            <img src="public/certs/alpha-phase2.jpg" alt="Alpha Capital Phase 2 Certificate" loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="cert-img-card__placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="cert-img-card__zoom">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-          <div class="cert-img-card__info">
-            <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
-            <div class="cert-img-card__title">Phase 2 · Certificate of Achievement</div>
-            <div class="cert-img-card__meta">
-              <span class="cert-status cert-status--pass">✓ Passed</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Alpha Capital Verification #1 -->
-        <div class="cert-img-card reveal reveal--d2" data-cert="public/certs/alpha-verification-1.jpg">
-          <div class="cert-img-card__preview">
-            <img src="public/certs/alpha-verification-1.jpg" alt="Alpha Capital Passed Verification" loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="cert-img-card__placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="cert-img-card__zoom">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-          <div class="cert-img-card__info">
-            <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
-            <div class="cert-img-card__title">Passed Verification · Qualified</div>
-            <div class="cert-img-card__meta">
-              <span class="cert-status cert-status--pass">✓ Qualified</span>
-              <span class="cert-date">16 Sep 2025</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Alpha Capital Verification #2 -->
-        <div class="cert-img-card reveal" data-cert="public/certs/alpha-verification.jpg">
-          <div class="cert-img-card__preview">
-            <img src="public/certs/alpha-verification.jpg" alt="Alpha Capital Passed Verification" loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="cert-img-card__placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="cert-img-card__zoom">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-          <div class="cert-img-card__info">
-            <div class="cert-img-card__firm"><span class="firm-badge firm-badge--alpha">Alpha Capital</span></div>
-            <div class="cert-img-card__title">Passed Verification · Qualified</div>
-            <div class="cert-img-card__meta">
-              <span class="cert-status cert-status--pass">✓ Qualified</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- TraderScale 100K -->
-        <div class="cert-img-card reveal reveal--d1" data-cert="public/certs/traderscale.jpg">
-          <div class="cert-img-card__preview">
-            <img src="public/certs/traderscale.jpg" alt="TraderScale 100K Certificate" loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="cert-img-card__placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="cert-img-card__zoom">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-          <div class="cert-img-card__info">
-            <div class="cert-img-card__firm"><span class="firm-badge firm-badge--ts">TraderScale</span></div>
-            <div class="cert-img-card__title">One Step Assessment 100K</div>
-            <div class="cert-img-card__meta">
-              <span class="cert-status cert-status--pass">✓ Funded</span>
-              <span class="cert-date">14 Sep 2024</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- FTMO Verification -->
-        <div class="cert-img-card reveal reveal--d2" data-cert="public/certs/ftmo.jpg">
-          <div class="cert-img-card__preview">
-            <img src="public/certs/ftmo.jpg" alt="FTMO Passed Verification" loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="cert-img-card__placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="cert-img-card__zoom">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-          <div class="cert-img-card__info">
-            <div class="cert-img-card__firm"><span class="firm-badge firm-badge--ftmo">FTMO</span></div>
-            <div class="cert-img-card__title">Passed Verification · Evaluation</div>
-            <div class="cert-img-card__meta">
-              <span class="cert-status cert-status--pass">✓ Verified</span>
-              <span class="cert-date">18 Fév 2025</span>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /certs-gallery -->
+      </div><!-- /certs-scroll -->
 
       <div class="certs-note reveal">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -453,14 +483,14 @@
   </div>
 
   <!-- ══════════════════════════════════════
-       OFFRE — PREMIUM CANDIDATURE
+       OFFRE — PREMIUM
   ══════════════════════════════════════ -->
   <section class="section section--dark" id="offres">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">04 · Accès Premium</div>
-        <h2>Une seule offre.<br /><span class="text-blue">L'excellence ou rien.</span></h2>
-        <p>SurgeonFX n'est pas ouvert à tout le monde. L'accès Premium est sur candidature. Seuls les membres sérieux et motivés sont acceptés.</p>
+        <div class="eyebrow">04 · Offre</div>
+        <h2>Tout ce dont tu as besoin.<br /><span class="text-blue">En un seul endroit.</span></h2>
+        <p>Analyses quotidiennes, trades en temps réel, formation complète et suivi direct avec Matt. Uniquement sur le Forex.</p>
       </div>
 
       <div class="offer-solo-wrap reveal">
@@ -469,16 +499,9 @@
 
           <!-- Header -->
           <div class="offer-solo__head">
-            <div class="offer-solo__badges">
-              <span class="offer-solo__badge offer-solo__badge--cand">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                Accès sur candidature
-              </span>
-              <span class="offer-solo__badge offer-solo__badge--hot">🔥 Places limitées</span>
-            </div>
             <div class="offer-solo__label">SurgeonFX Premium</div>
-            <div class="offer-solo__price">Voir sur Whop <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-            <p class="offer-solo__pitch">L'accès complet à la méthode Price Action de Matt : analyses quotidiennes, trades en direct, suivi personnalisé. Uniquement sur le Forex.</p>
+            <div class="offer-solo__price">Voir le prix sur Whop <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            <p class="offer-solo__pitch">La méthode Price Action de Matt en accès complet : ses analyses, ses trades en direct et son accompagnement pour progresser sur le Forex.</p>
           </div>
 
           <!-- Avantages -->
@@ -492,7 +515,7 @@
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  <div><strong>Trades en temps réel</strong><span>Entrée, SL, TP et raisonnement complet partagés avant execution</span></div>
+                  <div><strong>Trades en temps réel</strong><span>Entrée, SL, TP et raisonnement complet partagés avant exécution</span></div>
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -513,7 +536,7 @@
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  <div><strong>Support VIP direct avec Matt</strong><span>Questions, reviews de trades, feedback personnalisé</span></div>
+                  <div><strong>Accès direct à Matt</strong><span>Questions, reviews de trades et sessions en live régulières</span></div>
                 </li>
               </ul>
             </div>
@@ -522,15 +545,15 @@
           <!-- CTA -->
           <div class="offer-solo__footer">
             <a href="https://whop.com/joined/surgeon-fx/products/surgeon-fx/" target="_blank" rel="noopener" class="btn-main btn-main--xl offer-solo__cta">
-              Postuler pour l'accès Premium
+              Rejoindre SurgeonFX
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <p class="offer-solo__reassurance">
-              <span>✓ Candidature gratuite</span>
+              <span>✓ 5.0★ sur Whop</span>
               <span>·</span>
-              <span>✓ Réponse sous 24h</span>
+              <span>✓ Certifié prop firm</span>
               <span>·</span>
-              <span>✓ Places limitées</span>
+              <span>✓ Résultats transparents</span>
             </p>
           </div>
         </div>
@@ -550,26 +573,26 @@
       <div class="reviews">
         <div class="rev reveal">
           <div class="rev__stars">★★★★★</div>
-          <p>"Matt explique chaque trade Forex avec une précision chirurgicale. J'ai enfin une vraie méthode Price Action structurée et rentable."</p>
+          <p>"Un bon environnement d'apprentissage, le groupe est très actif, ça aide à se développer."</p>
           <div class="rev__author">
-            <div class="rev__av">A</div>
-            <div><strong>Antoine R.</strong><span>Membre Premium</span></div>
+            <div class="rev__av">B</div>
+            <div><strong>Bacha ahmed yacine</strong><span>Membre · 6 avril 2026</span></div>
           </div>
         </div>
         <div class="rev reveal reveal--d1">
           <div class="rev__stars">★★★★★</div>
-          <p>"Les certifications prop firm parlent d'elles-mêmes. Matt est légitime et transparent, les résultats sont publiés sans filtre."</p>
+          <p>"Le groupe est excellent ! J'ai la même manière de trader que le fondateur et j'aime voir sa façon d'appliquer la stratégie, j'aime beaucoup les lives et l'accessibilité de Mattis. Le groupe est très réactif."</p>
           <div class="rev__author">
-            <div class="rev__av">L</div>
-            <div><strong>Lucas M.</strong><span>Membre Premium</span></div>
+            <div class="rev__av">A</div>
+            <div><strong>Abdel</strong><span>Membre · 13 décembre 2025</span></div>
           </div>
         </div>
         <div class="rev reveal reveal--d2">
           <div class="rev__stars">★★★★★</div>
-          <p>"Meilleure communauté trading que j'ai rejointe. L'analyse technique de Matt est claire, pédagogique et vraiment rentable à appliquer."</p>
+          <p>"Le groupe est super !"</p>
           <div class="rev__author">
-            <div class="rev__av">S</div>
-            <div><strong>Sofia K.</strong><span>Membre Premium</span></div>
+            <div class="rev__av">R</div>
+            <div><strong>Raphael</strong><span>Membre · 20 novembre 2025</span></div>
           </div>
         </div>
       </div>
@@ -603,8 +626,8 @@
           <div class="faq__a"><p>Une base en Price Action Forex est appréciée mais pas obligatoire. La méthode est enseignée de A à Z. Ce qui compte c'est la motivation, la rigueur et la volonté d'apprendre sérieusement. Pas ton niveau de départ.</p></div>
         </div>
         <div class="faq__item">
-          <button class="faq__q">Comment fonctionne l'accès Premium ?</button>
-          <div class="faq__a"><p>L'accès Premium est sur candidature. Tu postules via le lien Whop, Matt examine ta candidature et tu reçois une réponse sous 24h. Les places sont volontairement limitées pour maintenir la qualité du suivi. Une fois accepté, tu accèdes directement au Discord privé et à tous les contenus.</p></div>
+          <button class="faq__q">Comment rejoindre SurgeonFX ?</button>
+          <div class="faq__a"><p>Tu cliques sur le bouton "Rejoindre", tu arrives sur la page Whop et tu t'abonnes. Tu accèdes immédiatement au Discord privé, à toutes les analyses, aux trades en temps réel et à la formation complète.</p></div>
         </div>
       </div>
     </div>
@@ -630,16 +653,16 @@
 
         <div class="cta-wall__actions">
           <a href="https://whop.com/joined/surgeon-fx/products/surgeon-fx/" target="_blank" rel="noopener" class="btn-main btn-main--xl">
-            Postuler pour l'accès Premium
+            Rejoindre SurgeonFX
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <p class="cta-wall__micro">✓ Candidature gratuite &nbsp;·&nbsp; ✓ Réponse sous 24h &nbsp;·&nbsp; ✓ Places limitées</p>
+          <p class="cta-wall__micro">✓ 5.0★ sur Whop &nbsp;·&nbsp; ✓ Certifié prop firm &nbsp;·&nbsp; ✓ Résultats transparents</p>
         </div>
 
         <div class="cta-wall__cards">
           <div class="proof-mini">
-            <strong>200+</strong>
-            <span>traders actifs</span>
+            <strong>6</strong>
+            <span>membres Premium</span>
           </div>
           <div class="proof-mini">
             <strong>5.0★</strong>
