@@ -86,6 +86,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 
 /* Burger */
 .nav__close{display:none}
+.nav__cta-mobile{display:none}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
 .burger span{display:block;width:20px;height:1.5px;background:var(--g1);border-radius:2px;transition:transform .3s,opacity .3s}
 .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
@@ -385,22 +386,20 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
    RESPONSIVE
 ============================================================ */
 
-/* ── 1200px : hero padding ── */
+/* ── 1200px ── */
 @media(max-width:1200px){
   .hero{padding:110px 56px 80px;gap:48px}
 }
 
-/* ── 1050px : légère compression ── */
+/* ── 1050px ── */
 @media(max-width:1050px){
   .hero{padding:110px 36px 80px;gap:36px}
   .hero__title{font-size:clamp(2.4rem,3.8vw,3.4rem)}
-  .offer-solo{padding:32px 28px}
-  .certs-grid{grid-template-columns:1fr 1fr}
 }
 
-/* ── 900px : hero colonne unique, grilles → 1 col ── */
+/* ── 900px : hero 1 colonne ── */
 @media(max-width:900px){
-  /* Hero → 1 colonne : override explicite du grid-column */
+  /* Hero — 1 colonne avec grid-column explicites anti-bug OVH */
   .hero{grid-template-columns:1fr;padding:100px 24px 60px;gap:32px;min-height:auto}
   .hero__content{grid-column:1;grid-row:1}
   .hero__visual{grid-column:1;grid-row:2;justify-content:center}
@@ -408,8 +407,6 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .hero__spotlight{display:none}
   .htc-glow{width:280px;height:280px}
   .discord-frame{max-width:520px;width:100%;margin:0 auto}
-
-  /* Texte hero */
   .hero__title{font-size:clamp(2.4rem,9vw,3.6rem)}
   .hero__desc{font-size:.95rem;max-width:100%}
   .hero__proof{gap:0;flex-wrap:wrap;row-gap:12px}
@@ -418,37 +415,39 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 
   /* Sections */
   .section{padding:72px 0}
-  .method-grid{grid-template-columns:1fr}
-  .offer-solo__body{grid-template-columns:1fr;gap:20px}
   .reviews{grid-template-columns:1fr}
   .parcours-split{grid-template-columns:1fr;gap:32px}
   .parcours-photo__wrap{aspect-ratio:4/3;max-height:380px}
   .certs-gallery{grid-template-columns:repeat(2,1fr)}
-  .certs-gallery .cert-img-card:nth-child(6){grid-column:auto}
   .certs-counter{flex-wrap:wrap;gap:16px;padding:20px}
   .cc-div{display:none}
   .cc-item{flex:unset;width:calc(50% - 8px)}
+  .offer-wrap{max-width:100%}
 }
 
 /* ── 768px : navigation burger ── */
 @media(max-width:768px){
-  /* Nav */
+  /* Nav desktop → burger */
   .nav__links{display:none}
-  .nav__right .pill-btn{display:none!important}
+  .nav__right .pill-btn{display:none}
   .burger{display:flex}
-  .nav__links.open{display:flex;flex-direction:column;position:fixed;inset:0;background:rgba(5,6,14,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);align-items:center;justify-content:center;gap:20px;z-index:199;padding:80px 24px 40px;overflow-y:auto}
-  .nav__links.open li{list-style:none}
-  .nav__links.open a{font-size:1.4rem;font-weight:700;color:rgba(255,255,255,.88);padding:10px 0;border-radius:0;display:block;text-align:center}
-  .nav__links.open a:hover{color:#fff;background:none}
-  .nav__cta-mobile{margin-top:12px;width:100%;max-width:320px}
-  .nav__cta-mobile .btn-main{width:100%;justify-content:center;font-size:1rem;padding:15px 24px}
+
+  /* Overlay mobile */
+  .nav__links.open{display:flex;flex-direction:column;position:fixed;inset:0;background:rgba(5,6,14,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);align-items:center;justify-content:center;gap:28px;z-index:199;padding:100px 24px 52px;overflow-y:auto}
+  .nav__links.open li{list-style:none;width:100%;text-align:center}
+  .nav__links.open a{font-size:1.45rem;font-weight:700;color:rgba(255,255,255,.85);padding:8px 0;display:block;text-align:center;transition:color .2s}
+  .nav__links.open a:hover{color:#fff}
+
+  /* CTA dans l'overlay */
+  .nav__cta-mobile{display:block;margin-top:8px;width:100%;max-width:280px}
+  .nav__cta-mobile .btn-main{width:100%;justify-content:center;font-size:1rem;padding:14px 24px}
+
   /* Bouton ✕ */
-  .nav__close{display:flex;position:absolute;top:18px;right:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#fff;width:42px;height:42px;border-radius:50%;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
-  .nav__close:hover{background:rgba(255,255,255,.16)}
+  .nav__close{display:flex;position:absolute;top:20px;right:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#fff;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+  .nav__close:hover{background:rgba(255,255,255,.18)}
 
   /* Sections */
   .section{padding:64px 0}
-  .method-cards{grid-template-columns:1fr 1fr}
   .offer-card{padding:28px 24px}
   .reviews{grid-template-columns:1fr}
   .rev__summary{gap:10px;padding:12px 16px}
@@ -458,17 +457,20 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .footer__inner{flex-direction:column;padding:32px 0 24px;gap:28px}
   .footer__bottom{flex-direction:column;text-align:center;gap:8px}
 
-  /* CTA */
+  /* CTA section */
   .ctaw{padding:72px 20px 64px}
   .ctaw__title{letter-spacing:-1px}
 }
 
 /* ── 520px : petit mobile ── */
 @media(max-width:520px){
+  /* Nav */
+  .nav__inner{padding:0 16px}
+
   /* Hero */
-  .hero{padding:88px 16px 48px}
+  .hero{padding:86px 16px 48px}
   .hero__title{font-size:clamp(1.9rem,10.5vw,2.8rem);letter-spacing:-1.5px}
-  .hero__desc{font-size:.9rem}
+  .hero__desc{font-size:.88rem}
   .hero__cta-row{flex-direction:column;align-items:stretch;gap:12px}
   .hero__cta-row .btn-main,.hero__cta-row .btn-ghost{text-align:center;justify-content:center;width:100%}
   .hero__proof{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -476,13 +478,17 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .proof-item{padding:10px 12px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);text-align:center;align-items:center}
   .tag--1{display:none}
 
-  /* Nav */
-  .nav__inner{padding:0 16px}
-
   /* Sections */
   .section{padding:52px 0}
   .section-head h2{font-size:clamp(1.6rem,7vw,2.2rem)}
   .wrap{padding:0 16px}
+
+  /* Offre */
+  .offer-wrap{max-width:100%;padding-top:20px}
+  .offer-badge{font-size:.58rem;padding:5px 16px}
+  .offer-card{padding:24px 20px}
+  .offer-card__name{font-size:1.15rem}
+  .offer-card__cta{width:100%;justify-content:center}
 
   /* Certs */
   .certs-gallery{grid-template-columns:1fr}
@@ -491,9 +497,6 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 
   /* Méthode */
   .method-cards{grid-template-columns:1fr}
-  .offer-card__cta{width:100%;justify-content:center}
-  .offer-wrap{max-width:100%}
-  .nav__close{display:flex}
 
   /* Reviews */
   .reviews{gap:12px}
@@ -502,18 +505,16 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .rev__summary{flex-direction:column;gap:6px;text-align:center}
   .rev__sum-sep{display:none}
 
-  /* CTA */
+  /* CTA section */
   .ctaw__title{font-size:clamp(1.8rem,8vw,2.6rem);letter-spacing:-.5px}
   .ctaw__stats{max-width:100%}
   .ctaw__stat strong{font-size:1.1rem}
   .ctaw__stat span{font-size:.6rem}
   .btn-main--xl{font-size:.9rem;padding:15px 22px}
 
-  /* Discord card */
-  .hero-discord{border-radius:var(--r2)}
-
   /* Parcours */
   .parcours-photo__wrap{aspect-ratio:3/2;max-height:300px}
+  .hero-discord{border-radius:var(--r2)}
 }
 
 /* ============================================================
