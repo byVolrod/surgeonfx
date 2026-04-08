@@ -16,9 +16,9 @@
   --green:    #22c55e;
   --red:      #f43f5e;
   --w:        #ffffff;
-  --g1:       rgba(255,255,255,0.62);
-  --g2:       rgba(255,255,255,0.35);
-  --g3:       rgba(255,255,255,0.14);
+  --g1:       rgba(255,255,255,0.75);
+  --g2:       rgba(255,255,255,0.48);
+  --g3:       rgba(255,255,255,0.18);
   --g4:       rgba(255,255,255,0.06);
   --r:        12px;
   --r2:       18px;
@@ -102,13 +102,13 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 /* ============================================================
    HERO
 ============================================================ */
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px;padding:120px 80px 80px;max-width:1360px;margin:0 auto;position:relative}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:56px;padding:120px 72px 80px;max-width:1360px;margin:0 auto;position:relative;overflow:hidden}
 .hero__noise{position:fixed;inset:0;opacity:.025;pointer-events:none;z-index:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")}
 .hero__spotlight{position:absolute;top:0;right:0;width:700px;height:700px;background:radial-gradient(circle at 70% 30%,rgba(26,127,255,.12),transparent 65%);pointer-events:none;animation:spotMove 10s ease-in-out infinite alternate}
 @keyframes spotMove{0%{transform:translate(0,0)}100%{transform:translate(-40px,40px)}}
 .hero__content{position:relative;z-index:1}
 .hero__kicker{display:flex;align-items:center;gap:9px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--g2);margin-bottom:24px}
-.hero__title{display:flex;flex-direction:column;font-size:clamp(2.8rem,4.5vw,4.6rem);font-weight:900;letter-spacing:-2.5px;line-height:1.0;margin-bottom:24px}
+.hero__title{display:flex;flex-direction:column;font-size:clamp(2.6rem,3.4vw,4rem);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:24px}
 .line{display:block}
 .outlined{-webkit-text-stroke:2.5px var(--blue);color:transparent}
 .hero__desc{font-size:1.05rem;color:var(--g1);line-height:1.78;max-width:480px;margin-bottom:36px}
@@ -120,9 +120,11 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .proof-item strong{font-size:1.05rem;font-weight:800;color:#fff}
 .proof-item span{font-size:.7rem;color:var(--g2);text-transform:uppercase;letter-spacing:.07em}
 .proof-sep{width:1px;height:32px;background:var(--border)}
+.star-gold{color:#f59e0b}
+.rating-gold{color:#f59e0b!important}
 
 /* HERO VISUAL */
-.hero__visual{position:relative;z-index:1}
+.hero__visual{position:relative;z-index:1;display:flex;align-items:center;justify-content:flex-end}
 .chart-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r3);padding:24px;animation:cardFloat 6s ease-in-out infinite}
 @keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .chart-card__header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
@@ -371,13 +373,19 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 /* ============================================================
    RESPONSIVE
 ============================================================ */
+@media(max-width:1200px){
+  .hero{padding:110px 56px 80px;gap:48px}
+}
 @media(max-width:1050px){
-  .hero{padding:120px 40px 80px;gap:40px}
+  .hero{padding:110px 36px 80px;gap:36px}
+  .hero__title{font-size:clamp(2.4rem,3.8vw,3.4rem)}
   .offer-solo{padding:32px 28px}
   .certs-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr;padding:100px 20px 60px;gap:40px;min-height:auto}
+  .hero{grid-template-columns:1fr;padding:100px 24px 60px;gap:36px;min-height:auto}
+  .hero__visual{justify-content:center}
+  .hero-discord{max-width:560px;margin:0 auto}
   .hero__spotlight{display:none}
   .hero__title{font-size:clamp(2.4rem,9vw,3.6rem)}
   .hero__desc{font-size:.95rem;max-width:100%}
@@ -505,7 +513,6 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 /* ============================================================
    HERO TRADE CARD (HTC) — interface pro
 ============================================================ */
-.hero__visual{position:relative;z-index:1;display:flex;justify-content:center;align-items:center}
 
 .htc-glow{position:absolute;width:380px;height:380px;background:radial-gradient(circle,rgba(26,127,255,.13),transparent 70%);pointer-events:none;z-index:0}
 
@@ -519,11 +526,11 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 /* ============================================================
    HERO DISCORD MOCKUP
 ============================================================ */
-.hero-discord{background:var(--card);border:1px solid var(--border);border-radius:var(--r3);overflow:hidden;width:100%;max-width:480px;box-shadow:0 32px 80px rgba(0,0,0,.6),0 0 0 1px rgba(26,127,255,.07);animation:cardFloat 6s ease-in-out infinite;position:relative;z-index:1}
-.hero-discord__bar{display:flex;align-items:center;gap:10px;padding:11px 16px;background:rgba(255,255,255,.03);border-bottom:1px solid var(--border2)}
+.hero-discord{background:var(--card);border:1px solid var(--border);border-radius:var(--r3);overflow:hidden;width:100%;max-width:520px;box-shadow:0 32px 80px rgba(0,0,0,.6),0 0 0 1px rgba(26,127,255,.07);animation:cardFloat 6s ease-in-out infinite;position:relative;z-index:1}
+.hero-discord__bar{display:flex;align-items:center;gap:10px;padding:11px 16px;background:rgba(255,255,255,.03);border-bottom:1px solid var(--border2);flex-wrap:nowrap;min-width:0}
 .hero-discord__dots{display:flex;align-items:center;gap:5px}
 .hero-discord__dots i{width:10px;height:10px;border-radius:50%;display:block}
-.hero-discord__label{flex:1;text-align:center;font-size:.7rem;font-weight:600;color:var(--g2);letter-spacing:.04em}
+.hero-discord__label{flex:1;text-align:center;font-size:.7rem;font-weight:600;color:var(--g2);letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hero-discord__live{display:flex;align-items:center;gap:5px;font-size:.68rem;font-weight:600;color:var(--green)}
 .hero-discord__img{width:100%;height:auto;display:block;object-fit:cover}
 
