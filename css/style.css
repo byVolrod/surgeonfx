@@ -260,7 +260,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 
 /* Includes dans la carte */
 .offer-card__includes{display:flex;flex-direction:column;gap:9px;padding:16px 0;border-top:1px solid var(--border2)}
-.offer-card__includes--grid{display:flex;flex-direction:column;gap:9px;padding:16px 0;border-top:1px solid var(--border2);align-items:center}
+.offer-card__includes--grid{display:flex;flex-direction:column;gap:9px;padding:16px 0;border-top:1px solid var(--border2);width:fit-content;margin:0 auto}
 .offer-card__inc{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--g1);font-weight:500}
 .offer-card__inc svg{color:var(--green);flex-shrink:0}
 
