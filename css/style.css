@@ -36,12 +36,6 @@
 html{
   scroll-behavior:smooth;
   background-color:var(--bg);
-  background-image:
-    radial-gradient(ellipse 200% 90% at 85%  0%,   rgba(26,127,255,.22), transparent 52%),
-    radial-gradient(ellipse 150% 80% at -5%  45%,  rgba(26,127,255,.16), transparent 52%),
-    radial-gradient(ellipse 170% 80% at 105% 78%,  rgba(26,127,255,.18), transparent 52%),
-    radial-gradient(ellipse 130% 70% at 50%  110%, rgba(26,127,255,.13), transparent 52%);
-  background-attachment:fixed;
   min-height:100%;
 }
 
