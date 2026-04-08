@@ -5,20 +5,23 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* BURGER */
-const burger  = document.getElementById('burger');
-const navMenu = document.getElementById('navLinks');
+const burger   = document.getElementById('burger');
+const navMenu  = document.getElementById('navLinks');
+const navClose = document.getElementById('navClose');
+
+function closeNav() {
+  burger.classList.remove('open');
+  navMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 burger.addEventListener('click', () => {
   const open = burger.classList.toggle('open');
   navMenu.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
 });
-navMenu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    burger.classList.remove('open');
-    navMenu.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
+if (navClose) navClose.addEventListener('click', closeNav);
+navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
 
 /* SCROLL REVEAL */
 const ro = new IntersectionObserver(entries => {
