@@ -2,8 +2,8 @@
    TOKENS
 ============================================================ */
 :root{
-  --bg:       #06060f;
-  --bg2:      #090917;
+  --bg:       #05060e;
+  --bg2:      #07091a;
   --card:     #0e0e20;
   --card2:    #131330;
   --border:   rgba(255,255,255,0.11);
@@ -32,7 +32,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--w);font-family:'Plus Jakarta Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
-body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 70% 55% at 75% 10%,rgba(26,127,255,.13),transparent 60%),radial-gradient(ellipse 55% 45% at 15% 55%,rgba(26,127,255,.07),transparent 60%),radial-gradient(ellipse 50% 40% at 80% 85%,rgba(26,127,255,.07),transparent 55%)}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 130% 70% at 80% 0%,rgba(26,127,255,.15),transparent 55%),radial-gradient(ellipse 100% 60% at 0% 45%,rgba(26,127,255,.09),transparent 55%),radial-gradient(ellipse 110% 65% at 100% 80%,rgba(26,127,255,.10),transparent 55%),radial-gradient(ellipse 90% 55% at 40% 100%,rgba(26,127,255,.08),transparent 55%)}
 .section,.ctaw,.footer{position:relative;z-index:1}
 .hero{position:relative;z-index:1}
 a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-width:100%}
