@@ -253,14 +253,14 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .offer-card__glow{position:absolute;top:-60px;right:-40px;width:340px;height:260px;background:radial-gradient(ellipse,rgba(26,127,255,.22),transparent 65%);pointer-events:none}
 .offer-card__hero{display:flex;flex-direction:column;gap:6px}
 .offer-card__top{display:flex;flex-direction:column;gap:4px;align-items:center;text-align:center}
-.offer-card__live{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:var(--green);font-size:.68rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:10px;width:fit-content}
+.offer-card__live{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:var(--green);font-size:.68rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:10px;width:fit-content;align-self:flex-start}
 .offer-card__name{font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.8px;line-height:1}
 .offer-card__sub{font-size:.72rem;color:var(--blue2);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
 .offer-card__cta{margin-top:auto}
 
 /* Includes dans la carte */
 .offer-card__includes{display:flex;flex-direction:column;gap:9px;padding:16px 0;border-top:1px solid var(--border2)}
-.offer-card__includes--grid{display:flex;flex-direction:column;gap:9px;padding:16px 0;border-top:1px solid var(--border2)}
+.offer-card__includes--grid{display:flex;flex-direction:column;gap:9px;padding:16px 0;border-top:1px solid var(--border2);align-items:center}
 .offer-card__inc{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--g1);font-weight:500}
 .offer-card__inc svg{color:var(--green);flex-shrink:0}
 
