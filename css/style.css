@@ -835,3 +835,19 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .htc__symbol{font-size:.85rem}
   .htc__rr{font-size:.75rem;padding:4px 10px}
 }
+
+/* ── Correctifs overflow mobile (déclarés après les règles de base pour l'emporter) ── */
+@media(max-width:900px){
+  /* Force les items du grid à ne pas dépasser la colonne */
+  .hero__content,.hero__visual{min-width:0;max-width:100%}
+  /* htc-glow déclaré tard dans le CSS — on force la taille mobile ici */
+  .htc-glow{width:260px !important;height:260px !important}
+  /* discord-frame idem */
+  .discord-frame{max-width:100% !important;width:100%}
+}
+@media(max-width:520px){
+  .hero-discord__live span{max-width:130px !important}
+}
+@media(max-width:390px){
+  .hero-discord__live span{max-width:110px !important}
+}
