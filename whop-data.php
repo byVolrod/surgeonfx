@@ -17,11 +17,7 @@ define('WHOP_API_KEY', 'apik_mxAZv6NeOwTgA_C3094589_C_5d916f47ffcce0da205ebb7ad0
 define('CACHE_FILE',   __DIR__ . '/whop-cache.json');
 define('CACHE_TTL',    300); // secondes — met à jour au plus toutes les 5 minutes
 
-// ── Cache ─────────────────────────────────────────────────────────────────────
-if (file_exists(CACHE_FILE) && (time() - filemtime(CACHE_FILE)) < CACHE_TTL) {
-    echo file_get_contents(CACHE_FILE);
-    exit;
-}
+// Cache désactivé — données récupérées en temps réel à chaque visite
 
 // ── Appel API Whop ────────────────────────────────────────────────────────────
 function whop_get($path) {
@@ -62,8 +58,5 @@ $output = json_encode([
     'total_reviews' => $total_reviews,
     'reviews'       => $reviews,
 ], JSON_UNESCAPED_UNICODE);
-
-// Sauvegarder en cache
-file_put_contents(CACHE_FILE, $output);
 
 echo $output;
