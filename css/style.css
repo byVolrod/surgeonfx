@@ -280,7 +280,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .svc-main__overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(5,6,14,.95) 0%,rgba(5,6,14,.3) 45%,transparent 70%);pointer-events:none}
 .svc-main__body{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:20px 22px;display:flex;flex-direction:column;gap:8px}
 .svc-main__tag{display:inline-flex;align-items:center;gap:7px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
-.svc-main h3{font-size:1.05rem;font-weight:800;color:#fff;letter-spacing:-.2px;line-height:1.2;margin:0}
+.svc-main h3{font-size:.9rem;font-weight:800;color:#fff;letter-spacing:-.1px;line-height:1.2;margin:0}
 .svc-main p{font-size:.82rem;color:var(--g1);line-height:1.55;margin:0}
 
 /* Cards services — image absolue pleine hauteur, titre épinglé en bas */
