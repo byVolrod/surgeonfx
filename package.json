@@ -1,0 +1,13 @@
+{
+  "name": "surgeonfx-whop-updater",
+  "version": "1.0.0",
+  "description": "Mise à jour automatique des données Whop sur SurgeonFXGroup",
+  "main": "update-whop.js",
+  "scripts": {
+    "update": "node update-whop.js"
+  },
+  "dependencies": {
+    "basic-ftp": "^5.0.5",
+    "dotenv": "^16.4.5"
+  }
+}

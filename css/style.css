@@ -370,6 +370,9 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .rev__av--blue{background:linear-gradient(135deg,var(--blue),var(--blue2))}
 .rev__av--purple{background:linear-gradient(135deg,#7c3aed,#a855f7)}
 .rev__av--green{background:linear-gradient(135deg,#059669,#10b981)}
+.rev__av--orange{background:linear-gradient(135deg,#ea580c,#f97316)}
+.rev__av--teal{background:linear-gradient(135deg,#0891b2,#06b6d4)}
+.rev__av--red{background:linear-gradient(135deg,#dc2626,#ef4444)}
 .rev__info{flex:1;min-width:0}
 .rev__info strong{display:block;font-size:.865rem;font-weight:700;color:#fff;margin-bottom:5px}
 .rev__meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
