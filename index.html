@@ -627,5 +627,89 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- ═══════════════════════════════════════
+       WHOP — Mise à jour automatique en live
+       Récupère membres + avis depuis whop-data.php
+       (cache serveur 1h) et met à jour la page.
+  ═══════════════════════════════════════ -->
+  <script>
+  (function () {
+    // Mapping user_id Whop → identité affichée
+    // Ajoute ici les futurs membres si tu veux personnaliser leur nom
+    var USERS = {
+      'user_M8Ul9lyUVTztJ': { name: 'Bacha ahmed yacine', initial: 'B', color: 'blue'   },
+      'user_yvVcbH5Fop5s2': { name: 'Abdel',               initial: 'A', color: 'purple' },
+      'user_qKZ3PWzOgRBhd': { name: 'Raphael',             initial: 'R', color: 'green'  },
+      'user_tA1zdd3vGXW4B': { name: 'Membre Whop',         initial: 'M', color: 'orange' },
+    };
+    var COLORS = ['blue', 'purple', 'green', 'orange', 'teal', 'red'];
+
+    function fmtDate(ts) {
+      if (!ts) return '';
+      var d = new Date(ts * 1000);
+      var M = ['jan.','fév.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+      return d.getDate() + ' ' + M[d.getMonth()] + ' ' + d.getFullYear();
+    }
+
+    function makeCard(r, i, hidden) {
+      var u = USERS[r.user_id] || { name: 'Membre Whop', initial: 'M', color: COLORS[i % COLORS.length] };
+      var date = fmtDate(r.created_at);
+      var el = document.createElement('div');
+      el.className = 'rev';
+      if (hidden) el.setAttribute('aria-hidden', 'true');
+      el.innerHTML =
+        '<div class="rev__top"><div class="rev__stars">★★★★★</div><div class="rev__source">' +
+        '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">' +
+        '<polyline points="20 6 9 17 4 12"/></svg>Whop</div></div>' +
+        '<div class="rev__ql">❝</div>' +
+        '<p>' + r.description.replace(/[\r\n]+/g, ' ').trim() + '</p>' +
+        '<div class="rev__author"><div class="rev__av rev__av--' + u.color + '">' + u.initial + '</div>' +
+        '<div class="rev__info"><strong>' + u.name + '</strong>' +
+        '<div class="rev__meta"><span class="rev__badge">✓ Membre vérifié</span>' +
+        (date ? '<span class="rev__date">' + date + '</span>' : '') +
+        '</div></div></div>';
+      return el;
+    }
+
+    fetch('/whop-data.php')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+
+        // 1. Nombre de membres (hero + offre)
+        var mc = '+' + data.member_count;
+        var heroMc  = document.querySelector('.hero__proof .proof-item strong');
+        var offerMc = document.querySelector('.offer-card__social strong');
+        if (heroMc)  heroMc.textContent  = mc;
+        if (offerMc) offerMc.textContent = mc;
+
+        // 2. Compteur d'avis dans la barre récap
+        var sumText = document.querySelector('.rev__sum-text');
+        if (sumText) {
+          sumText.innerHTML = 'Note moyenne sur <strong>Whop</strong> · ' + data.total_reviews + ' avis vérifiés';
+        }
+
+        // 3. Slider d'avis — reconstruit avec les vrais avis Whop
+        var revs = (data.reviews || []).filter(function (r) {
+          return r.description && r.description.trim().length > 10;
+        });
+        if (revs.length) {
+          var track = document.querySelector('.rev-scroll__track');
+          if (track) {
+            track.innerHTML = '';
+            // SET 1
+            revs.forEach(function (r, i) { track.appendChild(makeCard(r, i, false)); });
+            // SET 2 — duplicate pour boucle seamless
+            revs.forEach(function (r, i) { track.appendChild(makeCard(r, i, true)); });
+          }
+        }
+
+      })
+      .catch(function () {
+        // Silencieux — le contenu statique de secours reste affiché
+      });
+  })();
+  </script>
+
 </body>
 </html>
