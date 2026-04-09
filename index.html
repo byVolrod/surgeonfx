@@ -187,8 +187,17 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PARCOURS — LE PARCOURS DE MATTIS
+  ══════════════════════════════════════ -->
+  <section class="section section--dark" id="parcours">
+    <div class="wrap">
+
       <!-- SÉPARATEUR BIOGRAPHIE -->
-      <div class="about-divider" id="parcours">
+      <div class="about-divider">
         <span>Le parcours de Mattis</span>
       </div>
 
@@ -621,7 +630,7 @@
       </div>
     </div>
     <div class="wrap footer__bottom">
-      <span>© 2025 SurgeonFXGroup. Tous droits réservés.</span>
+      <span>© 2026 SurgeonFXGroup. Tous droits réservés.</span>
       <span>Le trading comporte des risques de perte en capital. Les performances passées ne garantissent pas les résultats futurs.</span>
     </div>
   </footer>
@@ -635,6 +644,21 @@
   ═══════════════════════════════════════ -->
   <script>
   (function () {
+    // ── Count-up ──────────────────────────────────────────────────────────────
+    function countUp(el, endVal, prefix, suffix, dur) {
+      var start = null;
+      var isFloat = endVal % 1 !== 0;
+      function tick(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        var v = endVal * ease;
+        el.textContent = (prefix || '') + (isFloat ? v.toFixed(1) : Math.round(v)) + (suffix || '');
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
     // Mapping user_id Whop → identité affichée
     // Ajoute ici les futurs membres si tu veux personnaliser leur nom
     var USERS = {
@@ -680,7 +704,7 @@
         var mc = '+' + data.member_count;
         var heroMc  = document.querySelector('.hero__proof .proof-item strong');
         var offerMc = document.querySelector('.offer-card__social strong');
-        if (heroMc)  heroMc.textContent  = mc;
+        if (heroMc)  countUp(heroMc, data.member_count, '+', '', 1200);
         if (offerMc) offerMc.textContent = mc;
 
         // 2. Compteur d'avis dans la barre récap
@@ -706,9 +730,31 @@
 
       })
       .catch(function () {
-        // Silencieux — le contenu statique de secours reste affiché
+        // Fallback : anime le compteur avec la valeur statique
+        var heroMc = document.querySelector('.hero__proof .proof-item strong');
+        if (heroMc) {
+          var raw = parseInt(heroMc.textContent.replace(/\D/g, ''), 10) || 11;
+          countUp(heroMc, raw, '+', '', 1200);
+        }
       });
   })();
+  </script>
+
+  <!-- Count-up note statique 5.0★ -->
+  <script>
+  setTimeout(function () {
+    var el = document.querySelector('.rating-gold');
+    if (!el) return;
+    var start = null;
+    function tick(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / 1400, 1);
+      var ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = (ease * 5).toFixed(1) + '★';
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }, 200);
   </script>
 
 </body>
