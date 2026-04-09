@@ -286,11 +286,9 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .svc-card__img img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block;transition:transform .5s var(--ease)}
 .svc-card:hover .svc-card__img img{transform:scale(1.02)}
 
-/* Corps : texte superposé en bas avec dégradé */
-.svc-card__body{position:relative;z-index:1;display:flex;flex-direction:column;gap:6px;padding:16px 18px;margin-top:auto;background:linear-gradient(to top,rgba(5,6,14,.96) 0%,rgba(5,6,14,.82) 55%,transparent 100%);min-height:200px;justify-content:flex-end}
-.svc-card__icon{width:32px;height:32px;background:var(--bgBlue);border:1px solid var(--bdBlue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--blue2);flex-shrink:0;margin-bottom:4px}
-.svc-card h3{font-size:.92rem;font-weight:800;color:#fff;letter-spacing:-.15px}
-.svc-card p{font-size:.78rem;color:rgba(255,255,255,.72);line-height:1.5}
+/* Corps : titre seul en bas avec dégradé fin */
+.svc-card__body{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;padding:12px 14px;margin-top:auto;background:linear-gradient(to top,rgba(5,6,14,.92) 0%,rgba(5,6,14,.5) 60%,transparent 100%);min-height:52px}
+.svc-card h3{font-size:.88rem;font-weight:800;color:#fff;letter-spacing:-.1px;margin:0}
 
 /* ============================================================
    OFFER — Carte centrée
