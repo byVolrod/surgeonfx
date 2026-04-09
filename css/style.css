@@ -130,7 +130,6 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .hero__title{display:flex;flex-direction:column;font-size:clamp(2.6rem,3.4vw,4rem);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:24px}
 .line{display:block}
 .outlined{-webkit-text-stroke:2.5px var(--blue);color:transparent}
-.outlined-e{color:#fff;-webkit-text-stroke:0}
 .hero__desc{font-size:1.05rem;color:var(--g1);line-height:1.78;max-width:480px;margin-bottom:36px}
 .hero__pro{color:#fff;font-weight:800;background:linear-gradient(90deg,var(--blue),var(--blue2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero__cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:36px}
