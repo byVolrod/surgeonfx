@@ -40,19 +40,6 @@ html{
   overflow-x:hidden;
 }
 
-/* Fond global — dégradé bleu très subtil fixé */
-html::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-  background:
-    radial-gradient(ellipse 110% 60% at 50% 0%,   rgba(26,127,255,.14) 0%, transparent 65%),
-    radial-gradient(ellipse 75%  45% at 80% 60%,  rgba(26,127,255,.09) 0%, transparent 60%),
-    radial-gradient(ellipse 65%  40% at 15% 90%,  rgba(26,127,255,.07) 0%, transparent 55%),
-    linear-gradient(180deg, #04050d 0%, #050614 40%, #04050d 100%);
-}
 
 body{
   background:transparent;
