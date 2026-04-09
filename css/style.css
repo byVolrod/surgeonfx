@@ -333,8 +333,19 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .offer-card__trust{text-align:center;font-size:.72rem;color:var(--g2)}
 
 /* ============================================================
-   REVIEWS
+   REVIEWS — Slider défilement infini
 ============================================================ */
+
+/* Conteneur pleine largeur avec fondu sur les bords */
+.rev-scroll{overflow:hidden;width:100vw;margin-left:calc(-50vw + 50%);padding:8px 0 12px;-webkit-mask:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
+.rev-scroll__track{display:flex;gap:20px;width:max-content;animation:revScroll 28s linear infinite}
+.rev-scroll:hover .rev-scroll__track{animation-play-state:paused}
+@keyframes revScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Cartes fixes */
+.rev-scroll .rev{flex:0 0 380px;width:380px}
+
+/* Grille legacy (conservée pour compatibilité éventuelle) */
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 
 .rev{background:var(--card);border:1px solid var(--border);border-radius:var(--r3);padding:28px 24px;display:flex;flex-direction:column;gap:0;transition:border-color .25s,transform .3s var(--ease);position:relative;overflow:hidden}
