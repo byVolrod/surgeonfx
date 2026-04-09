@@ -48,9 +48,9 @@ html::before{
   z-index:-1;
   pointer-events:none;
   background:
-    radial-gradient(ellipse 100% 55% at 50% 0%,   rgba(26,127,255,.07) 0%, transparent 65%),
-    radial-gradient(ellipse 70%  40% at 80% 60%,  rgba(26,127,255,.04) 0%, transparent 60%),
-    radial-gradient(ellipse 60%  35% at 15% 90%,  rgba(26,127,255,.03) 0%, transparent 55%),
+    radial-gradient(ellipse 110% 60% at 50% 0%,   rgba(26,127,255,.14) 0%, transparent 65%),
+    radial-gradient(ellipse 75%  45% at 80% 60%,  rgba(26,127,255,.09) 0%, transparent 60%),
+    radial-gradient(ellipse 65%  40% at 15% 90%,  rgba(26,127,255,.07) 0%, transparent 55%),
     linear-gradient(180deg, #04050d 0%, #050614 40%, #04050d 100%);
 }
 
