@@ -52,11 +52,23 @@ $total_reviews = isset($rev_data['pagination']['total_count'])
     ? (int) $rev_data['pagination']['total_count']
     : count($reviews);
 
+// Note moyenne calculée depuis les avis récupérés
+$rating_sum   = 0;
+$rating_count = 0;
+foreach ($all_reviews as $r) {
+    if (isset($r['rating']) && is_numeric($r['rating'])) {
+        $rating_sum   += (float) $r['rating'];
+        $rating_count++;
+    }
+}
+$average_rating = $rating_count > 0 ? round($rating_sum / $rating_count, 1) : 5.0;
+
 // ── Réponse JSON ──────────────────────────────────────────────────────────────
 $output = json_encode([
-    'member_count'  => $member_count,
-    'total_reviews' => $total_reviews,
-    'reviews'       => $reviews,
+    'member_count'   => $member_count,
+    'total_reviews'  => $total_reviews,
+    'average_rating' => $average_rating,
+    'reviews'        => $reviews,
 ], JSON_UNESCAPED_UNICODE);
 
 echo $output;

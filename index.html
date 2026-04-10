@@ -125,7 +125,7 @@
         <div class="proof-sep"></div>
         <div class="proof-item">
           <strong class="rating-gold">5.0★</strong>
-          <span>6 avis Whop</span>
+          <span><span class="whop-rev-count"><!-- WHOP:REVIEW_COUNT -->6<!-- /WHOP:REVIEW_COUNT --></span> avis Whop</span>
         </div>
       </div>
     </div>
@@ -380,9 +380,9 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <div class="offer-card__social">
-            <span><strong>★★★★★</strong> 5.0 Whop</span>
+            <span>★★★★★ <strong class="whop-rating">5.0</strong> · <strong class="whop-rev-count-offer"><!-- WHOP:REVIEW_COUNT -->6<!-- /WHOP:REVIEW_COUNT --></strong> avis Whop</span>
             <span>·</span>
-            <span><strong><!-- WHOP:MEMBER_COUNT -->+11<!-- /WHOP:MEMBER_COUNT --></strong> membres actifs</span>
+            <span><strong class="whop-mc-offer"><!-- WHOP:MEMBER_COUNT -->+11<!-- /WHOP:MEMBER_COUNT --></strong> membres actifs</span>
             <span>·</span>
             <span>Accès Discord immédiat</span>
           </div>
@@ -471,7 +471,7 @@
       <!-- Résumé avis -->
       <div class="rev__summary reveal">
         <div class="rev__sum-stars">★★★★★</div>
-        <div class="rev__sum-score">5.0</div>
+        <div class="rev__sum-score whop-rating-avg">5.0</div>
         <div class="rev__sum-sep"></div>
         <span class="rev__sum-text">Note moyenne sur <strong>Whop</strong> · <!-- WHOP:REVIEW_COUNT -->6<!-- /WHOP:REVIEW_COUNT --> avis vérifiés</span>
         <div class="rev__sum-sep"></div>
@@ -653,14 +653,27 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
 
-        // 1. Nombre de membres (hero + offre)
+        // 1. Membres — hero + offre
         var mc = '+' + data.member_count;
-        var heroMc  = document.querySelector('.hero__proof .proof-item strong');
-        var offerMc = document.querySelector('.offer-card__social strong');
-        if (heroMc)  countUp(heroMc, data.member_count, '+', '', 1200);
+        var heroMc = document.querySelector('.hero__proof .proof-item strong');
+        if (heroMc) countUp(heroMc, data.member_count, '+', '', 1200);
+        var offerMc = document.querySelector('.whop-mc-offer');
         if (offerMc) offerMc.textContent = mc;
 
-        // 2. Compteur d'avis dans la barre récap
+        // 2. Nombre d'avis — hero + offre
+        var heroRevCount  = document.querySelector('.whop-rev-count');
+        var offerRevCount = document.querySelector('.whop-rev-count-offer');
+        if (heroRevCount)  heroRevCount.textContent  = data.total_reviews;
+        if (offerRevCount) offerRevCount.textContent = data.total_reviews;
+
+        // 3. Note moyenne — offre + barre récap
+        var rating = data.average_rating ? data.average_rating.toFixed(1) : '5.0';
+        var offerRating = document.querySelector('.whop-rating');
+        var avgScore    = document.querySelector('.whop-rating-avg');
+        if (offerRating) offerRating.textContent = rating;
+        if (avgScore)    avgScore.textContent    = rating;
+
+        // 4. Barre récap témoignages
         var sumText = document.querySelector('.rev__sum-text');
         if (sumText) {
           sumText.innerHTML = 'Note moyenne sur <strong>Whop</strong> · ' + data.total_reviews + ' avis vérifiés';
