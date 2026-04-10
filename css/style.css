@@ -518,6 +518,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
   .parcours-photo__wrap{aspect-ratio:4/3;max-height:380px}
   .coach-card{grid-template-columns:1fr;gap:24px}
   .coach-card__photo{aspect-ratio:4/3;max-height:300px}
+  .coach-card__photo img{object-position:center 65%}
   .coach-card__stats{gap:20px}
   .certs-counter{flex-wrap:wrap;gap:16px;padding:20px}
   .cc-div{display:none}
