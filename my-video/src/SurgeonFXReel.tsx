@@ -214,7 +214,7 @@ const Scene1Logo: React.FC = () => {
           fontWeight: 500,
         }}
       >
-        Precision · Forex · Live
+        Précision · Forex · En Direct
       </div>
     </AbsoluteFill>
   );
@@ -331,7 +331,7 @@ const Scene2NowLive: React.FC = () => {
               animation: 'none',
             }}
           />
-          NOW LIVE
+EN DIRECT
         </div>
       </div>
 
@@ -350,7 +350,7 @@ const Scene2NowLive: React.FC = () => {
           fontWeight: 500,
         }}
       >
-        SurgeonFX is LIVE{' '}
+        SurgeonFX est EN DIRECT{' '}
         <span style={{fontSize: 36}}>🩺</span>
       </div>
     </AbsoluteFill>
@@ -438,9 +438,9 @@ const Scene3BluePunch: React.FC = () => {
             maxWidth: 900,
           }}
         >
-          Tired of trading
+          Marre de trader
           <br />
-          alone in the dark?
+          seul dans le noir ?
         </div>
 
         <div
@@ -457,9 +457,9 @@ const Scene3BluePunch: React.FC = () => {
             lineHeight: 1.35,
           }}
         >
-          Join an elite community of Forex traders.
+          Rejoins une communauté de traders d'élite.
           <br />
-          Every setup analyzed. Every trade justified.
+          Chaque setup analysé. Chaque trade justifié.
         </div>
       </AbsoluteFill>
     </AbsoluteFill>
