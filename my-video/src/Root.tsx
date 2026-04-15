@@ -3,12 +3,23 @@ import { Composition } from "remotion";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
 import { SurgeonFXReel } from "./SurgeonFXReel";
+import { SurgeonFXLogoReveal } from "./SurgeonFXLogoReveal";
 
 // Each <Composition> is an entry in the sidebar!
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* 🔵 iPhone-keynote style rotating S logo reveal */}
+      <Composition
+        id="SurgeonFXLogoReveal"
+        component={SurgeonFXLogoReveal}
+        durationInFrames={180}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
       {/* 🔥 SurgeonFX announcement reel — 9:16 Instagram format */}
       <Composition
         id="SurgeonFXReel"
